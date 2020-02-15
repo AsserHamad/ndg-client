@@ -1,0 +1,20 @@
+{
+    "en":{
+        "navbar":{
+            "home": "Home",
+            "projects": "Projects",
+            "services": "Services",
+            "about": "About",
+            "contact": "Contact Us"
+        }
+    },
+    "ar":{
+        "navbar":{
+            "home": "الرئيسية",
+            "projects": "المشاريع",
+            "services": "الخدمات",
+            "about": "نبذة عنا",
+            "contact": "إتصل بنا"
+        }
+    }
+}

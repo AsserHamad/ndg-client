@@ -1,8 +1,18 @@
-import React from "react";
-import "./NavBar.css";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import React, { useState } from "react";
+import useGlobalState from "../../useGlobalState";
+import './NavBar.css';
 
 function NavBar() {
+  const [navbar, setNavbar] = useState({});
+  const lang = useGlobalState().lang.lang;
+  fetch('data/lang.json')
+  .then(res => {
+    return res.json()
+  })
+  .then(res => {
+    setNavbar(res[lang].navbar);
+  });
+  
   return (
     <div>
       <nav id="navbar" className="">
@@ -14,16 +24,16 @@ function NavBar() {
           </div>
           <ul id="menu">
             <li>
-              <a href="#home">Home</a>
+              <a href="#home">{navbar.home}</a>
             </li>
             <li>
-              <a href="#services">Services</a>
+              <a href="#services">{navbar.services}</a>
             </li>
             <li>
-              <a href="#about">About</a>
+              <a href="#about">{navbar.about}</a>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <a href="#contact">{navbar.contact}</a>
             </li>
           </ul>
         </div>
