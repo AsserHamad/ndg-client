@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import useGlobalState from "../../useGlobalState";
 import './NavBar.css';
+import { Link } from "react-router-dom";
 
 function NavBar() {
   const globalState = useGlobalState();
@@ -21,19 +22,19 @@ function NavBar() {
           </div>
           <ul id="menu">
             <li>
-              <a className={lang} href="#home">{navbar.home}</a>
+            <Link to="/" style={{ textDecoration: 'inherit', fontSize: 'inherit' }}><a className={lang}>{navbar.home}</a></Link>
             </li>
             <li>
-              <a className={lang} href="#projects">{navbar.projects}</a>
+              <a className={lang}>{navbar.projects}</a>
             </li>
             <li>
-              <a className={lang} href="#about">{navbar.about}</a>
+            <Link to="/about" style={{ textDecoration: 'inherit', fontSize: 'inherit' }}><a className={lang}>{navbar.about}</a></Link>
             </li>
             <li>
-              <a className={lang} href="#services">{navbar.services}</a>
+              <a className={lang}>{navbar.services}</a>
             </li>
             <li>
-              <a className={lang} href="#contact">{navbar.contact}</a>
+              <a className={lang}>{navbar.contact}</a>
             </li>
           </ul>
         </div>

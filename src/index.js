@@ -4,10 +4,13 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { GlobalStateProvier } from './useGlobalState';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
     <GlobalStateProvier>
-        <App />
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
     </GlobalStateProvier>
     , document.getElementById('root'));
 

@@ -2,11 +2,18 @@ import React from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar/NavBar';
+import { Switch, Route } from 'react-router-dom';
+import Homepage from './components/Homepage/Homepage';
+import About from './components/About/About';
 
 function App() {
   return (
     <div>
       <NavBar />
+      <Switch>
+        <Route exact path ="/" component={Homepage} />
+        <Route exact path ="/about" component={About} />
+      </Switch>
     </div>
   );
   
