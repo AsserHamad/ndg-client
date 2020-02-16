@@ -3,15 +3,12 @@ import useGlobalState from "../../useGlobalState";
 import './NavBar.css';
 
 function NavBar() {
+  const globalState = useGlobalState();
   const [navbar, setNavbar] = useState({});
-  const lang = useGlobalState().lang.lang;
+  const lang = globalState.lang.lang;
   fetch('data/lang.json')
-  .then(res => {
-    return res.json()
-  })
-  .then(res => {
-    setNavbar(res[lang].navbar);
-  });
+    .then(res => res.json())
+    .then(res => setNavbar(res[lang].navbar));
   
   return (
     <div>
@@ -59,6 +56,10 @@ function NavBar() {
             <a href="#contact">Contact</a>
           </li>
         </ul>
+      </div>
+      <div className="mainDiv">
+        <button onClick={() => globalState.setLang(lang === 'en' ? 'ar' : 'en')}>Change Lang</button>
+
       </div>
     </div>
 
