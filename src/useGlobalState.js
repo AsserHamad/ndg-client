@@ -7,7 +7,7 @@ const SET_LANG = 'SET_LANG';
 
 const initialState = {
     lang: {
-        lang: 'ar'
+        lang: 'en'
     }
 };
 
@@ -36,7 +36,8 @@ export const GlobalStateProvier = ({ children }) => {
 const useGlobalState = () => {
     const [state, dispatch] = useContext(GlobalStateContext);
   
-    const setLang = ({ lang }) => {
+    const setLang = (lang) => {
+        console.log('lang is', lang)
       dispatch({ 
         type: SET_LANG, 
         payload: { 
@@ -47,7 +48,7 @@ const useGlobalState = () => {
   
     return {
       setLang,
-      lang: { ...state.lang },
+      lang: state.lang,
     };
   };
   

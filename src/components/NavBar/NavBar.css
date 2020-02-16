@@ -78,12 +78,26 @@ a {
   text-decoration: none;
 }
 
+.mainDiv {
+  margin-top: 400px;
+}
+
+.en{
+  
+}
+
+.ar{
+  font-family: Tahoma, sans-serif !important;
+  font-weight: normal;
+  font-size: 80% !important;
+}
+
 /*======================================================
                           Navbar
   ======================================================*/
 #navbar {
-  background: rgb(255, 255, 255);
-  color: rgb(13, 26, 38);
+  /* background: rgb(255, 255, 255); */
+  color: white;
   position: fixed;
   top: 0;
   height: 60px;
@@ -95,7 +109,7 @@ a {
 .nav-wrapper {
   margin: auto;
   text-align: center;
-  width: 70%;
+  width: 100%;
 }
 @media (max-width: 768px) {
   .nav-wrapper {
@@ -110,9 +124,10 @@ a {
 /*   LOGO   */
 .logo {
   float: left;
-  margin-left: 28px;
+  margin-left: 45px;
+  margin-top:10px;
   font-size: 2em;
-  height: 60px;
+  height: 46px;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -124,10 +139,12 @@ a {
 /*   NAVBAR LIST   */
 #navbar ul {
   display: inline-block;
-  float: right;
+  margin-top:10px;
+  float : left;
+  color:white;
   list-style: none;
-  /* margin-right: 14px; */
-  margin-top: -2px;
+  margin-left: 2%;
+  margin-top: 0.7%;
   text-align: right;
   transition: transform 0.5s ease-out;
   -webkit-transition: transform 0.5s ease-out;
@@ -148,24 +165,26 @@ a {
 }
 
 #navbar li a {
-  color: rgb(13, 26, 38);
+  color: white;
   display: block;
-  font-size: 0.9em;
+  font-size: 0.6em;
+  font-weight: bold;
   height: 50px;
   letter-spacing: 1px;
-  margin: 0 20px;
-  padding: 0 4px;
+  margin: 0 2em;
+  /* margin-top: 20%; */
+  /* padding: 0 7px; */
   position: relative;
   text-decoration: none;
   text-transform: uppercase;
-  transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
 }
 
 #navbar li a:hover {
   /* border-bottom: 1px solid rgb(28, 121, 184); */
-  color: rgb(28, 121, 184);
-  transition: all 1s ease;
+  color: rgb(138, 138, 138);
+  transition: all 0.1s ease;
   -webkit-transition: all 1s ease;
 }
 
@@ -177,17 +196,17 @@ a {
   width: 0%;
   height: 1.5px;
   bottom: -2px;
-  background: rgb(0, 0, 0); /*initial color*/
+  background: rgb(45, 45, 50); /*initial color*/
 }
 
 /* --------------- ANIMATION -----------------*/
 #navbar li a:before {
   left: 0;
-  transition: 0.7s;
+  transition: 0.3s;
 }
 
 #navbar li a:after {
-  background: rgb(13, 26, 38);
+  background: rgb(45, 45, 50);
   right: 0;
   /* transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1); */
 }
@@ -195,7 +214,7 @@ a {
 #navbar li a:hover:before {
   background: rgb(1, 255, 22); /*ending color*/
   width: 100%;
-  transition: width 0.5s cubic-bezier((0.22, 0.61, 0.36, 1));
+  transition: width 0.1s cubic-bezier((0.22, 0.61, 0.36, 1));
 }
 
 #navbar li a:hover:after {
