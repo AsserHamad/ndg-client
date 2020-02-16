@@ -16,21 +16,24 @@ function NavBar() {
         <div className="nav-wrapper">
           <div className="logo">
             <a href="#home">
-              <i className="fas fa-chess-knight"></i> NDG
+            <img src="ndg.png" className="logo" alt="logo" />
             </a>
           </div>
           <ul id="menu">
             <li>
-              <a href="#home">{navbar.home}</a>
+              <a className={lang} href="#home">{navbar.home}</a>
             </li>
             <li>
-              <a href="#services">{navbar.services}</a>
+              <a className={lang} href="#projects">{navbar.projects}</a>
             </li>
             <li>
-              <a href="#about">{navbar.about}</a>
+              <a className={lang} href="#about">{navbar.about}</a>
             </li>
             <li>
-              <a href="#contact">{navbar.contact}</a>
+              <a className={lang} href="#services">{navbar.services}</a>
+            </li>
+            <li>
+              <a className={lang} href="#contact">{navbar.contact}</a>
             </li>
           </ul>
         </div>
@@ -59,7 +62,6 @@ function NavBar() {
       </div>
       <div className="mainDiv">
         <button onClick={() => globalState.setLang(lang === 'en' ? 'ar' : 'en')}>Change Lang</button>
-
       </div>
     </div>
 
