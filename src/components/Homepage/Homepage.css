@@ -1,18 +1,17 @@
 #videoDiv {
   position: absolute;
-  top: 0;
 }
 
 video {
     width: 100%;
     float: left;
-    margin-left: 7%;
+    /* margin-left: 7%; */
     opacity: 0.4;
 }
 
 @media (max-width: 768px) {
   video {
-      width: 87%;
+      width: 100%;
       float: left;
       /* margin-left: 7%; */
       opacity: 0.4;

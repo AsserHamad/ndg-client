@@ -8,6 +8,8 @@ import About from './components/About/About';
 import Aside from './components/Aside/Aside';
 import useGlobalState from './useGlobalState';
 
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
+
 function App() {
   const globalState = useGlobalState();
   return (

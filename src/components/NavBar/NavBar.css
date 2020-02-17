@@ -66,6 +66,7 @@ a {
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
 @media (max-width: 768px) {
   .logo {
     /*       margin-left: 5px; */
@@ -73,7 +74,6 @@ a {
 }
 /*   NAVBAR LIST   */
 #navbar ul {
-  display: inline-block;
   margin-top:10px;
   float : left;
   color:white;
@@ -85,7 +85,7 @@ a {
   -webkit-transition: transform 0.5s ease-out;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
   #navbar ul {
     display: none;
   }
@@ -168,7 +168,7 @@ a {
 /*======================================================
                     Mobile Menu Menu Icon
   ======================================================*/
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
   .menuIcon {
     cursor: pointer;
     display: block;

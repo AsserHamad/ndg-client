@@ -1,11 +1,12 @@
 #aside-container {
-    margin-top: 3.4em;
+    margin-top: 2.2em;
     position: fixed;
 }
 
 @media (max-width: 800px) {
   #aside-container {
     display: none;
+    margin-left: auto;
   }
 
 }
