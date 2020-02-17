@@ -4,10 +4,14 @@ import React from 'react';
 const GlobalStateContext = createContext();
 
 const SET_LANG = 'SET_LANG';
+const SET_PAGE = 'SET_PAGE';
 
 const initialState = {
     lang: {
         lang: 'en'
+    },
+    page: {
+        page: 'home'
     }
 };
 
@@ -17,6 +21,11 @@ const globalStateReducer = (state, action) => {
             return {
                 ...state,
                 lang: action.payload
+            };
+        case SET_PAGE:
+            return {
+                ...state,
+                page: action.payload
             };
         default:
             return state;
@@ -46,9 +55,20 @@ const useGlobalState = () => {
       });
     };
   
+    const setPage = (page) => {
+      dispatch({ 
+        type: SET_PAGE, 
+        payload: { 
+          page: page.page
+        } 
+      });
+    };
+  
     return {
       setLang,
+      setPage,
       lang: state.lang,
+      page: state.page
     };
   };
   

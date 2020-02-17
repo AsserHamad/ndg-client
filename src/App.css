@@ -6,3 +6,21 @@ body {
   background-color: #2d2d32 !important;
   margin: 1% 2%;
 }
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#container {
+  /* margin: 80px auto; */
+  margin-top: 5.8em;
+  margin-left: 7%;
+  overflow-x: hidden;
+  color: white;
+}
+
+@media(max-width: 1024px) {
+  #container {
+    margin-left: 0;
+  }
+}
