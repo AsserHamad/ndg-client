@@ -10,10 +10,9 @@ function NavBar() {
   fetch('data/lang.json')
     .then(res => res.json())
     .then(res => setNavbar(res[lang].navbar));
-  
   return (
     <div>
-      <nav id="navbar" className="">
+      <nav id="navbar">
         <div className="nav-wrapper">
           <div className="logo">
             <a href="#home">
@@ -22,19 +21,23 @@ function NavBar() {
           </div>
           <ul id="menu">
             <li>
-            <Link to="/" style={{ textDecoration: 'inherit', fontSize: 'inherit' }}><a className={lang}>{navbar.home}</a></Link>
+            <Link to="/" onClick={() => globalState.setPage({page: 'home'})} style={{ textDecoration: 'inherit', fontSize: 'inherit' }}>
+              <span className={lang}>{navbar.home}</span>
+            </Link>
             </li>
             <li>
-              <a className={lang}>{navbar.projects}</a>
+              <span className={lang}>{navbar.projects}</span>
             </li>
             <li>
-            <Link to="/about" style={{ textDecoration: 'inherit', fontSize: 'inherit' }}><a className={lang}>{navbar.about}</a></Link>
+            <Link to="/about" onClick={() => globalState.setPage({page: 'about'})} style={{ textDecoration: 'inherit', fontSize: 'inherit' }}>
+              <span className={lang}>{navbar.about}</span>
+            </Link>
             </li>
             <li>
-              <a className={lang}>{navbar.services}</a>
+              <span className={lang}>{navbar.services}</span>
             </li>
             <li>
-              <a className={lang}>{navbar.contact}</a>
+              <span className={lang}>{navbar.contact}</span>
             </li>
           </ul>
         </div>
@@ -61,9 +64,9 @@ function NavBar() {
           </li>
         </ul>
       </div>
-      <div className="mainDiv">
+      {/* <div className="mainDiv">
         <button onClick={() => globalState.setLang(lang === 'en' ? 'ar' : 'en')}>Change Lang</button>
-      </div>
+      </div> */}
     </div>
 
     /*        <Navbar bg="transparent" expand="lg">
