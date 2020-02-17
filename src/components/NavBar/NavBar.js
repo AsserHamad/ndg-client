@@ -1,34 +1,44 @@
 import React, { useState } from "react";
 import useGlobalState from "../../useGlobalState";
-import './NavBar.css';
+import "./NavBar.css";
 import { Link } from "react-router-dom";
 
 function NavBar() {
   const globalState = useGlobalState();
   const [navbar, setNavbar] = useState({});
   const lang = globalState.lang.lang;
-  fetch('data/lang.json')
+  fetch("data/lang.json")
     .then(res => res.json())
     .then(res => setNavbar(res[lang].navbar));
-  
+
   return (
     <div>
       <nav id="navbar" className="">
         <div className="nav-wrapper">
           <div className="logo">
             <a href="#home">
-            <img src="ndg.png" className="logo" alt="logo" />
+              <img src="ndg.png" className="logo" alt="logo" />
             </a>
           </div>
           <ul id="menu">
             <li>
-            <Link to="/" style={{ textDecoration: 'inherit', fontSize: 'inherit' }}><a className={lang}>{navbar.home}</a></Link>
+              <Link
+                to="/"
+                style={{ textDecoration: "inherit", fontSize: "inherit" }}
+              >
+                <a className={lang}>{navbar.home}</a>
+              </Link>
             </li>
             <li>
               <a className={lang}>{navbar.projects}</a>
             </li>
             <li>
-            <Link to="/about" style={{ textDecoration: 'inherit', fontSize: 'inherit' }}><a className={lang}>{navbar.about}</a></Link>
+              <Link
+                to="/about"
+                style={{ textDecoration: "inherit", fontSize: "inherit" }}
+              >
+                <a className={lang}>{navbar.about}</a>
+              </Link>
             </li>
             <li>
               <a className={lang}>{navbar.services}</a>
@@ -62,7 +72,11 @@ function NavBar() {
         </ul>
       </div>
       <div className="mainDiv">
-        <button onClick={() => globalState.setLang(lang === 'en' ? 'ar' : 'en')}>Change Lang</button>
+        <button
+          onClick={() => globalState.setLang(lang === "en" ? "ar" : "en")}
+        >
+          Change Lang
+        </button>
       </div>
     </div>
 
