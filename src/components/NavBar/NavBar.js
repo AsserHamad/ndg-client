@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import useGlobalState from "../../useGlobalState";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
+import { slide as Menu } from "react-burger-menu";
+import "../Burger/Burger.css";
 
 function NavBar() {
   const globalState = useGlobalState();
@@ -51,7 +53,38 @@ function NavBar() {
           </ul>
         </div>
       </nav>
-
+      {/* Burger button and menu*/}
+      <Menu right>
+        <ul id="menu">
+          <li>
+            <Link
+              to="/"
+              onClick={() => globalState.setPage({ page: "home" })}
+              style={{ textDecoration: "inherit", fontSize: "inherit" }}
+            >
+              <span className={lang}>{navbar.home}</span>
+            </Link>
+          </li>
+          <li>
+            <span className={lang}>{navbar.projects}</span>
+          </li>
+          <li>
+            <Link
+              to="/about"
+              onClick={() => globalState.setPage({ page: "about" })}
+              style={{ textDecoration: "inherit", fontSize: "inherit" }}
+            >
+              <span className={lang}>{navbar.about}</span>
+            </Link>
+          </li>
+          <li>
+            <span className={lang}>{navbar.services}</span>
+          </li>
+          <li>
+            <span className={lang}>{navbar.contact}</span>
+          </li>
+        </ul>
+      </Menu>
       {/*  <div className="menuIcon">
         <span className="icon icon-bars"></span>
         <span className="icon icon-bars overlay"></span>

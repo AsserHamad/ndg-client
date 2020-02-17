@@ -7,7 +7,6 @@ import Homepage from "./components/Homepage/Homepage";
 import About from "./components/About/About";
 import Aside from "./components/Aside/Aside";
 import useGlobalState from "./useGlobalState";
-import Burger from "./components/Burger/Burger";
 
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
@@ -16,7 +15,6 @@ function App() {
   return (
     <div>
       <NavBar />
-      <Burger />
       <Aside page={globalState.page.page} />
       <div id="container">
         <Switch>
