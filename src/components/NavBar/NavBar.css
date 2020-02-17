@@ -21,7 +21,7 @@ a {
   margin-top: 400px;
 }
 
-.ar{
+.ar {
   font-family: Tahoma, sans-serif !important;
   font-weight: normal;
   font-size: 80% !important;
@@ -74,9 +74,9 @@ a {
 }
 /*   NAVBAR LIST   */
 #navbar ul {
-  margin-top:10px;
-  float : left;
-  color:white;
+  margin-top: 10px;
+  float: left;
+  color: white;
   list-style: none;
   margin-left: 4%;
   margin-top: 0.7%;
@@ -85,7 +85,7 @@ a {
   -webkit-transition: transform 0.5s ease-out;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   #navbar ul {
     display: none;
   }
@@ -96,7 +96,7 @@ a {
     margin-top: 1.5%;
   }
 }
-@media (orientation: landscape) {
+@media (orientation: landscape) and (min-width: 1024px) {
   #navbar ul {
     display: inline-block;
   }
@@ -344,7 +344,7 @@ a {
 /*======================================================
                    Responsive Mobile Menu 
   ======================================================*/
-.overlay-menu {
+#overlay-menu {
   background: lightblue;
   color: rgb(13, 26, 38);
   display: flex;
