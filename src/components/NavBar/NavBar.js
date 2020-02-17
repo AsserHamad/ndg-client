@@ -5,9 +5,10 @@ import { Link } from "react-router-dom";
 import Burger from "../Burger/Burger";
 
 function NavBar() {
-  const globalState = useGlobalState();
-  const [navbar, setNavbar] = useState({});
-  const lang = globalState.lang.lang;
+  const globalState = useGlobalState(),
+        [navbar, setNavbar] = useState({}),
+        lang = globalState.lang.lang,
+        page = globalState.page.page;
   fetch("data/lang.json")
     .then(res => res.json())
     .then(res => setNavbar(res[lang].navbar));
@@ -28,11 +29,11 @@ function NavBar() {
                 onClick={() => globalState.setPage({ page: "home" })}
                 style={{ textDecoration: "inherit", fontSize: "inherit" }}
               >
-                <span className={lang}>{navbar.home}</span>
+                <span className={lang + " " + ((page==='home') ? "home" : "")}>{navbar.home}</span>
               </Link>
             </li>
             <li>
-              <span className={lang}>{navbar.projects}</span>
+              <span className={lang + " " + ((page==='projects') ? "projects" : "")}>{navbar.projects}</span>
             </li>
             <li>
               <Link
@@ -40,14 +41,14 @@ function NavBar() {
                 onClick={() => globalState.setPage({ page: "about" })}
                 style={{ textDecoration: "inherit", fontSize: "inherit" }}
               >
-                <span className={lang}>{navbar.about}</span>
+                <span className={lang + " " + ((page==='about') ? "about" : "")}>{navbar.about}</span>
               </Link>
             </li>
             <li>
-              <span className={lang}>{navbar.services}</span>
+              <span className={lang + " " + ((page==='services') ? "services" : "")}>{navbar.services}</span>
             </li>
             <li>
-              <span className={lang}>{navbar.contact}</span>
+              <span className={lang + " " + ((page==='contact') ? "contact" : "")}>{navbar.contact}</span>
             </li>
           </ul>
         </div>
