@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import useGlobalState from "../../useGlobalState";
 import "./NavBar.css";
 import { Link } from "react-router-dom";
-import { slide as Menu } from "react-burger-menu";
 
 function NavBar() {
   const globalState = useGlobalState();
