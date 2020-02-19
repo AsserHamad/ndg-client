@@ -11,7 +11,7 @@ const initialState = {
         lang: 'en'
     },
     page: {
-        page: 'home'
+        page: window.location.pathname.substr(1, window.location.pathname.length) || 'home'
     }
 };
 
