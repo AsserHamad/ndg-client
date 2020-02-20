@@ -1,0 +1,179 @@
+#projects-container{
+    position: absolute;
+    /* right: 0; */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    width: 93%;
+    height: 100%;
+    border-left: 1px solid #414145;
+    /* background-color: black; */
+    display: flex;
+    z-index: 1;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#ndg-info {
+    z-index: 10;
+    position: absolute;
+    width: 93%;
+    display: flex;
+    background-color: rgba(0,0,0,0.5);
+    padding: 1.5%;
+}
+#ndg-info-text {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+}
+
+#ndg-info-button {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ndg-info-button button {
+    width: 13em;
+    height: 4em;
+    background-color: #F9BF26;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#ndg-info-button-text {
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 60%;
+    transition-duration: 0.3s;
+    height: 100%;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#ndg-info-button-text:hover {
+    /* width: 70%; */
+    margin-right: 20px;
+}
+
+/* Title box thing */
+#project-title {
+    width: 29%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#title-box {
+    border: 1px solid #414145;
+    margin-top: -17%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55%;
+}
+
+#box-1 {
+    width: 110%;
+    height: 70%;
+    margin-left: -1px;
+    border: 1px solid #2D2D32;
+    background-color: #2D2D32;
+    z-index: 1;
+}
+
+#box-2 {
+    position: absolute;
+    width: 25%;
+    z-index: 1;
+    height: 65%;
+    margin-left: 2em;
+    border: 1px solid #2D2D32;
+    background-color: #2D2D32;
+}
+
+@keyframes box-borders{
+    0% {
+        border-top: 0px solid yellow; 
+        border-right: 0px solid #F9BF26; 
+        border-left: 0px solid #F9BF26; 
+        border-bottom: 0px solid #F9BF26; 
+    }
+    20% {
+        border-top: 4px solid linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(219,255,0,1) 100%); 
+        border-right: 0px solid #F9BF26; 
+        border-left: 0px solid #F9BF26; 
+        border-bottom: 0px solid #F9BF26; 
+    }
+    50% {
+        border-top: 4px solid #F9BF26; 
+        border-right: 4px solid #F9BF26; 
+        border-left: 0px solid #F9BF26; 
+        border-bottom: 0px solid #F9BF26; 
+    }
+    80% {
+        border-top: 4px solid #F9BF26; 
+        border-right: 4px solid #F9BF26; 
+        border-left: 4px solid #F9BF26; 
+        border-bottom: 0px solid #F9BF26; 
+    }
+    100% {
+        border-top: 4px solid #F9BF26; 
+        border-right: 4px solid #F9BF26; 
+        border-left: 4px solid #F9BF26; 
+        border-bottom: 4px solid #F9BF26; 
+    }
+}
+
+#yellow-box {
+    position: absolute;
+    z-index: 3;
+    width: 17%;
+    margin-left: 2em;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    padding-left: 5%;
+    padding-top: 1em;
+    /* animation: box-borders 2s ease-in-out; */
+    border: 4px solid #F9BF26; 
+    /* background: rgb(2,0,36); */
+    /* background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(219,255,0,1) 35%, rgba(0,212,255,1) 35%); */
+}
+
+#yellow-box > p {
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+#yellow-box span {
+    margin-top: 10%;
+    font-weight: bold;
+    font-size: 300%;
+}
+
+#yellow-box div {
+    margin-top: 70%;
+    font-size: 0.7em;
+}
+
+#project-image {
+    background-image: url(http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/main1555183767.jpg);
+    background-position-y: -8em;
+    /* TODO: remove this ^ */
+    width: 71%;
+    height: 100%;
+    opacity: 40%;
+    z-index: 1;
+}

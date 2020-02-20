@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import useGlobalState from "../../useGlobalState";
 import "./NavBar.css";
-import { Link } from "react-router-dom";
 import Burger from "../Burger/Burger";
+import NavBarLink from "./NavBarLink/NavBarLink";
 
 function NavBar() {
   const globalState = useGlobalState(),
@@ -23,27 +23,9 @@ function NavBar() {
             </a>
           </div>
           <ul id="menu">
-            <li>
-              <Link
-                to="/"
-                onClick={() => globalState.setPage({ page: "home" })}
-                style={{ textDecoration: "inherit", fontSize: "inherit" }}
-              >
-                <span className={lang + " " + ((page==='home') ? "home" : "")}>{navbar.home}</span>
-              </Link>
-            </li>
-            <li>
-              <span className={lang + " " + ((page==='projects') ? "projects" : "")}>{navbar.projects}</span>
-            </li>
-            <li>
-              <Link
-                to="/about"
-                onClick={() => globalState.setPage({ page: "about" })}
-                style={{ textDecoration: "inherit", fontSize: "inherit" }}
-              >
-                <span className={lang + " " + ((page==='about') ? "about" : "")}>{navbar.about}</span>
-              </Link>
-            </li>
+            <NavBarLink page={page} pageName="home" navbar={navbar} link="/" lang={lang} />
+            <NavBarLink page={page} pageName="projects" navbar={navbar} link="/projects" lang={lang} />
+            <NavBarLink page={page} pageName="about" navbar={navbar} link="/about" lang={lang} />
             <li>
               <span className={lang + " " + ((page==='services') ? "services" : "")}>{navbar.services}</span>
             </li>
