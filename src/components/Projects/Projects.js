@@ -3,6 +3,7 @@ import "./Projects.css";
 
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import useGlobalState from "../../useGlobalState";
+import { Link } from "react-router-dom";
 
 function Projects() {
     const globalState = useGlobalState(),
@@ -40,8 +41,8 @@ function Projects() {
                 <div id="title-box">
                 <div id="box-1" />
                 <div id="yellow-box">
-                    <p>{((previewNum == 0) ? projectsText.category0 : projectsText.category1)}</p>
-                    <span>{((previewNum == 0) ? projectsText.name0 : projectsText.name1)}</span>
+                    <p>{((previewNum === 0) ? projectsText.category0 : projectsText.category1)}</p>
+                    <span>{((previewNum === 0) ? projectsText.name0 : projectsText.name1)}</span>
                     <div>
                         <p>
                         {projectsText.viewProjectLink} <FaLongArrowAltRight />
@@ -51,18 +52,20 @@ function Projects() {
                 <div id="box-2" />
             </div>
             </div>
-            <div id="project-image" style={{backgroundImage: `url(${((previewNum == 0) ? projectsText.image0 : projectsText.image1)})`}} />
+            <div id="project-image" style={{backgroundImage: `url(${((previewNum === 0) ? projectsText.image0 : projectsText.image1)})`}} />
         </div>
-            <button id="explore-button">
-                <div id="ndg-info-button-text">
-                {projectsText.startExploring}
-                </div>
-                <div id="ndg-info-button-arrow">
-                    <FaLongArrowAltRight />
-                </div>
-            </button>
+            <Link to="/projects/explore">
+                <button id="explore-button">
+                    <div id="ndg-info-button-text">
+                        {projectsText.startExploring}
+                    </div>
+                    <div id="ndg-info-button-arrow">
+                        <FaLongArrowAltRight />
+                    </div>
+                </button>
+            </Link>
             <div id="previewNavigatingDiv">
-    <button onClick={changePreviewNum} className="previewNavigatingButtons">&lt; {projectsText.back}</button>
+                <button onClick={changePreviewNum} className="previewNavigatingButtons">&lt; {projectsText.back}</button>
                 <button onClick={changePreviewNum} className="previewNavigatingButtons">{projectsText.next} &gt;</button>
             </div>
     </div>
