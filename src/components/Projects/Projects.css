@@ -138,7 +138,6 @@
     position: absolute;
     z-index: 3;
     width: 17%;
-    margin-left: 2em;
     height: 55%;
     display: flex;
     flex-direction: column;
@@ -147,7 +146,7 @@
     padding-left: 5%;
     padding-top: 1em;
     /* animation: box-borders 2s ease-in-out; */
-    border: 4px solid #F9BF26; 
+    border: 4px solid #F9BF26;
     /* background: rgb(2,0,36); */
     /* background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(219,255,0,1) 35%, rgba(0,212,255,1) 35%); */
 }
@@ -160,20 +159,71 @@
 #yellow-box span {
     margin-top: 10%;
     font-weight: bold;
-    font-size: 300%;
+    font-size: 400%;
 }
 
 #yellow-box div {
-    margin-top: 70%;
+    /* margin-top: 70%; */
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    /* justify-content: ; */
+    height: 100%;
     font-size: 0.7em;
 }
 
 #project-image {
-    background-image: url(http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/main1555183767.jpg);
     background-position-y: -8em;
     /* TODO: remove this ^ */
     width: 71%;
     height: 100%;
     opacity: 40%;
     z-index: 1;
+}
+
+#explore-button {
+    width: 10%;
+    position: fixed;
+    bottom: 0;
+    z-index: 20;
+    width: 13em;
+    height: 4em;
+    background-color: #F9BF26;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#previewNavigatingDiv {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 20;
+    width: 17em;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.previewNavigatingButtons {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+    height: 100%;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: light;
+    background-color: #2D2D32;
+    color: #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.2s;
+}
+
+.previewNavigatingButtons:hover {
+    background-color: #F9BF26;
+    color: white;
+
 }

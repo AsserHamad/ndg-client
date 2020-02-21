@@ -13,6 +13,22 @@
             "services": "Services",
             "about": "About",
             "contact": "Contact Us"
+        },
+        "projects": {
+            "description": "As a multidisciplinary firm, we maintain considerable experience, skills and resources to undertake a wide variety of projects. NDG was started in 1999 and serves a local and national client base. Customers recognize the firm’s ability to provide and coordinate a broad spectrum of specialized professional services through our highly qualified staff  and the use of an extensive professional",
+            "viewProjectsButton": "View All Projects",
+            "viewProjectLink": "View Project",
+            "startExploring": "Start Exploring",
+            "category0": "URBAN DESIGN",
+            "name0": "SunPark (Maasara)",
+            "image0": "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/main1555183767.jpg",
+            "category1": "URBAN DESIGN",
+            "name1": "AlAqeer archeologyDistrict",
+            "image1": "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/aqeer_main1555174708.jpg",
+            "previewCategory": "URBAN DESIGN",
+            "previewName": "SunPark (Maasara)",
+            "back": "back",
+            "next": "next"
         }
     },
     "ar":{
@@ -29,6 +45,16 @@
             "services": "الخدمات",
             "about": "نبذة عنا",
             "contact": "إتصل بنا"
+        },
+        "projects": {
+            "description": "بصفتنا شركة متعددة التخصصات ، فإننا نحافظ على خبرة ومهارات وموارد كبيرة للقيام بمجموعة واسعة من المشاريع. بدأت NDG في عام 1999 وتخدم قاعدة عملاء محلية ووطنية. يدرك العملاء قدرة الشركة على توفير وتنسيق مجموعة واسعة من الخدمات المهنية المتخصصة من خلال موظفينا المؤهلين تأهيلا عاليا واستخدام محترف واسع النطاق",
+            "viewProjectsButton": "عرض جميع المشاريع",
+            "viewProjectLink": "عرض مشروع",
+            "startExploring": "ابدأ الاستكشاف",
+            "previewCategory": "التصميم الحضري",
+            "previewName": "صنبارك (المعصرة)",
+            "back": "عودة",
+            "next": "التالى"
         }
     }
 }
