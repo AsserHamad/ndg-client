@@ -1,24 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Projects.css";
 
 import { FaLongArrowAltRight } from 'react-icons/fa';
 import useGlobalState from "../../useGlobalState";
 import { Link } from "react-router-dom";
+import dp from "./dummyProjects";
 
 function Projects() {
+    const projects = dp.projects, categories = dp.categories, subcategories = dp.subcategories;
     const globalState = useGlobalState(),
           [projectsText, setProjectsText] = useState({}),
           [previewNum, setPreviewNum] = useState(0),
           lang = globalState.lang.lang;
-    fetch("data/lang.json")
-      .then(res => res.json())
-      .then(res => {
-          setProjectsText(res[lang].projects);
-      });
-
+    useEffect(() => {
+        fetch("/data/lang.json")
+          .then(res => res.json())
+          .then(res => {
+              setProjectsText(res[lang].projects);
+          });
+    }, [])
     function changePreviewNum() {
-        setPreviewNum((previewNum === 0) ? 1 : 0)
+        setPreviewNum((previewNum + 1) % 3);
     }
+    console.log(dp)
     return(
     <div>
         <div id="ndg-info">
@@ -41,8 +45,8 @@ function Projects() {
                 <div id="title-box">
                 <div id="box-1" />
                 <div id="yellow-box">
-                    <p>{((previewNum === 0) ? projectsText.category0 : projectsText.category1)}</p>
-                    <span>{((previewNum === 0) ? projectsText.name0 : projectsText.name1)}</span>
+                    <p>{categories[lang][projects[previewNum].category]}</p>
+                    <span>{projects[previewNum].title[lang]}</span>
                     <div>
                         <p>
                         {projectsText.viewProjectLink} <FaLongArrowAltRight />
@@ -52,7 +56,7 @@ function Projects() {
                 <div id="box-2" />
             </div>
             </div>
-            <div id="project-image" style={{backgroundImage: `url(${((previewNum === 0) ? projectsText.image0 : projectsText.image1)})`}} />
+            <div id="project-image" style={{backgroundImage: `url(${projects[previewNum].preview})`}} />
         </div>
             <Link to="/projects/explore">
                 <button id="explore-button">

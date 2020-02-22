@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import useGlobalState from "../../useGlobalState";
 import "./NavBar.css";
 import Burger from "../Burger/Burger";
@@ -9,9 +9,11 @@ function NavBar() {
         [navbar, setNavbar] = useState({}),
         lang = globalState.lang.lang,
         page = globalState.page.page;
-  fetch("data/lang.json")
-    .then(res => res.json())
-    .then(res => setNavbar(res[lang].navbar));
+  useEffect(() => {
+    fetch("/data/lang.json")
+      .then(res => res.json())
+      .then(res => setNavbar(res[lang].navbar));
+  }, []);
 
   return (
     <div>
@@ -19,7 +21,7 @@ function NavBar() {
         <div className="nav-wrapper">
           <div className="logo">
             <a href="#home">
-              <img src="ndg.png" className="logo" alt="logo" />
+              <img src="/ndg.png" className="logo" alt="logo" />
             </a>
           </div>
           <ul id="menu">

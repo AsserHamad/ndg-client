@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import './pageTransitions/slideTransition.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Route, withRouter } from 'react-router-dom';
+import { Route, withRouter, Redirect, Switch } from 'react-router-dom';
 import { AnimatedSwitch } from 'react-router-transition';
 import NavBar from './components/NavBar/NavBar';
 import Homepage from './components/Homepage/Homepage';
@@ -19,16 +19,19 @@ function App() {
       <NavBar />
       <Aside page={globalState.page.page}/>
           <div id="container">
-              <AnimatedSwitch
+              {/* <AnimatedSwitch
                 atEnter={{opacity: 0}}
                 atLeave={{opacity: 0}}
                 atActive={{opacity: 1}}
-              >
-                  <Route exact path ="/" component={Homepage} />
-                  <Route exact path ="/about" component={About} />
-                  <Route exact path ="/projects" component={Projects} />
-                  <Route exact path ="/projects/explore" component={ProjectsExplore} />
-              </AnimatedSwitch>
+              > */}
+                <Switch>
+                  <Route exact path="/" component={Homepage} />
+                  <Route exact path="/about" component={About} />
+                  <Route exact path="/projects" component={Projects} />
+                  <Route exact path="/projects/explore" component={ProjectsExplore} />
+                  <Route path="/*" component={() => <Redirect to='/' />} />
+                </Switch>
+              {/* </AnimatedSwitch> */}
           </div>
     </div>
   );
