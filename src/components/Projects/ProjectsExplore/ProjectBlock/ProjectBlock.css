@@ -68,6 +68,7 @@
 .project-brief-description {
     margin-top: 1.3vh;
     font-size: 1.6vh;
+    color: white;
 }
 
 .project-brief-info {
@@ -76,6 +77,7 @@
     text-shadow: 0px 0px 3px black;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    color: white;
 }
 
 .project-brief-info span{

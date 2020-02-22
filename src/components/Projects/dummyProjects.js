@@ -1,6 +1,7 @@
 const projects = {
     projects: [
     {
+        id: 0,
         title: {
             en: "SunPark (Maasara)",
             ar:  "سان بارك (المعصرة)"
@@ -27,6 +28,7 @@ const projects = {
         videos: []
     },
     {
+        id: 1,
         title: {
             en: "AlAqeer archeologyDistrict",
             ar:  "العقير الأثرية"
@@ -53,6 +55,7 @@ const projects = {
         videos: []
     },
     {
+        id: 2,
         title: {
             en: "Al Dahab Corridor",
             ar:  "محل الدهب"
@@ -79,6 +82,7 @@ const projects = {
         videos: []
     },
     {
+        id: 3,
         title: {
             en: "Al-Nada Covered Street",
             ar:  "الندى شارع مغطى"
@@ -105,6 +109,7 @@ const projects = {
         videos: []
     },
     {
+        id: 4,
         title: {
             en: "BAB MECCA",
             ar:  "باب مكة"
@@ -131,6 +136,7 @@ const projects = {
         videos: []
     },
     {
+        id: 5,
         title: {
             en: "ALEXANDRIA AIRPORT LAKE",
             ar:  "بحيرة الاسكندريه"
@@ -157,6 +163,7 @@ const projects = {
         videos: []
     },
     {
+        id: 6,
         title: {
             en: "FISH MARKET",
             ar:  "سوق السمك"
@@ -183,6 +190,7 @@ const projects = {
         videos: []
     },
     {
+        id: 7,
         title: {
             en: "BAGNEED HOTEL PLAZA",
             ar:  "فندق باجنيد بلازا"

@@ -3,8 +3,10 @@
     /* right: 0; */
     overflow-x: hidden;
     overflow-y: hidden;
-    width: 100%;
+    width: 90%;
     height: 100%;
+    bottom: 0;
+    right: 0;
     border-left: 1px solid #414145;
     /* background-color: black; */
     display: flex;
@@ -13,9 +15,11 @@
 }
 
 #ndg-info {
+    top: 80px;
+    right: 0;
     z-index: 10;
     position: absolute;
-    width: 93%;
+    width: 90%;
     display: flex;
     background-color: rgba(0,0,0,0.5);
     padding: 1.5%;
@@ -74,12 +78,27 @@
 
 #title-box {
     border: 1px solid #414145;
-    margin-top: -17%;
+    margin-top: 30%;
     width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 55%;
+}
+
+@media (max-width: 1024px){
+    #projects-container {
+        width: 100%;
+        right: 0;
+    }
+
+    #ndg-info {
+        display: none;
+    }
+
+    #project-title {
+        width: 0;
+    }
 }
 
 #box-1 {
@@ -173,12 +192,37 @@
 }
 
 #project-image {
-    background-position-y: -8em;
     /* TODO: remove this ^ */
     width: 71%;
     height: 100%;
     opacity: 40%;
     z-index: 1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 1024px) {
+    #project-image {
+        width: 100%;
+    }
+
+    #yellow-box {
+        position: absolute;
+        left: 0;
+        width: 50%;
+        height: 40%;
+    }
+
+    #yellow-box > p {
+        font-size: 3vh;
+    }
+
+    #yellow-box span {
+        font-size: 5vh;
+    }
 }
 
 #explore-button {
@@ -226,4 +270,16 @@
     background-color: #F9BF26;
     color: white;
 
+}
+
+@media (max-width: 1024px) {
+    #previewNavigatingDiv {
+        width: 40%;
+        height: 15%;
+    }
+
+    #explore-button {
+        width: 40%;
+        height: 15%;
+    }
 }
