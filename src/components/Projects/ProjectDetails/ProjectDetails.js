@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './ProjectDetails.css';
 import useGlobalState from '../../../useGlobalState';
 import projects from '../dummyProjects';
 
+import { FaAngleDown } from 'react-icons/fa';
+import ProjectMainDetails from './ProjectMainDetails/ProjectMainDetails';
+
 function ProjectDetails(props){
     const globalState = useGlobalState(),
-          lang = globalState.lang.lang;
+          lang = globalState.lang.lang,
+          [projectDetails, setProjectDetails] = useState({});
     const [project, category, subcategory] = getProject();
   
     function getProject(){
@@ -17,16 +21,41 @@ function ProjectDetails(props){
         }
     }
 
+    useEffect(() => {
+        fetch("/data/lang.json")
+          .then(res => res.json())
+          .then(res => {
+              setProjectDetails(res[lang].projectDetails);
+          });
+    }, [lang])
+
     return(
         <div className="project-details-container">
-            <div className="project-title">
-                {project.title[lang]}
+            <div>
+                <div className="project-title">
+                    <div>
+                        <p>{project.title[lang]}</p>
+                        <div className="project-subtitle">
+                            <p>{project.location[lang]} - {project.owner[lang]}</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="video-container">
+                    <video className="background-video" autoPlay loop muted>
+                    <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
-            <div className="video-container">
-                <video className="background-video" autoPlay loop muted>
-                <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-                </video>
+            <ProjectMainDetails
+                project={project}
+                category={category}
+                subcategory={subcategory}
+                projectDetails={projectDetails}
+                lang={lang}
+            />
+            <div className="downArrow">
+                <FaAngleDown />
             </div>
         </div>
     )

@@ -191,6 +191,11 @@
     font-size: 0.7em;
 }
 
+.link:hover {
+    color: white;
+    text-decoration: none;
+}
+
 #project-image {
     /* TODO: remove this ^ */
     width: 71%;
@@ -275,7 +280,7 @@
 @media (max-width: 1024px) {
     #previewNavigatingDiv {
         width: 40%;
-        height: 15%;
+        height: 8%;
     }
 
     #explore-button {

@@ -19,14 +19,17 @@
             "viewProjectsButton": "View All Projects",
             "viewProjectLink": "View Project",
             "startExploring": "Start Exploring",
-            "category0": "URBAN DESIGN",
-            "name0": "SunPark (Maasara)",
-            "image0": "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/main1555183767.jpg",
-            "category1": "URBAN DESIGN",
-            "name1": "AlAqeer archeologyDistrict",
-            "image1": "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/aqeer_main1555174708.jpg",
             "back": "back",
             "next": "next"
+        },
+        "projectDetails": {
+            "projectDetails": "Project Details",
+            "owner": "Owner",
+            "location": "Location",
+            "area": "Area",
+            "builtUpArea": "Built Up Area",
+            "year": "Date of Completion",
+            "gallery": "Gallery"
         }
     },
     "ar":{
@@ -49,12 +52,6 @@
             "viewProjectsButton": "عرض جميع المشاريع",
             "viewProjectLink": "عرض مشروع",
             "startExploring": "ابدأ الاستكشاف",
-            "category0": "التصميم الحضري",
-            "name0": "صنبارك (المعصرة)",
-            "image0": "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/main1555183767.jpg",
-            "category1": "التصميم الحضري",
-            "name1": "العقير الأثرية",
-            "image1": "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/aqeer_main1555174708.jpg",
             "back": "عودة",
             "next": "التالى"
         }

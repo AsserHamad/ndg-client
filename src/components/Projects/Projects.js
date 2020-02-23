@@ -29,7 +29,7 @@ function Projects() {
             <div id="ndg-info-text">
                 {projectsText.description}
             </div>
-            <div id="ndg-info-button">
+            <Link id="ndg-info-button" className="link" to="/projects/explore">
                 <button>
                     <div id="ndg-info-button-text">
                         {projectsText.viewProjectsButton}
@@ -38,7 +38,7 @@ function Projects() {
                         <FaLongArrowAltRight />
                     </div>
                 </button>
-            </div>
+            </Link>
         </div>
         <div id="projects-container">
             <div id="project-title">
@@ -48,9 +48,18 @@ function Projects() {
                     <p>{categories[lang][projects[previewNum].category]}</p>
                     <span>{projects[previewNum].title[lang]}</span>
                     <div>
+                    <Link className="link" to={{
+                        pathname: `/projects/${projects[previewNum].id}`,
+                        projectBlock:{
+                            project: projects[previewNum],
+                            category: categories[lang][projects[previewNum].category],
+                            subcategory: subcategories[lang][projects[previewNum].subcategory]
+                        }
+                    }}>
                         <p>
                         {projectsText.viewProjectLink} <FaLongArrowAltRight />
                         </p>
+                    </Link>
                     </div>
                 </div>
                 <div id="box-2" />

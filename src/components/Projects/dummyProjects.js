@@ -24,7 +24,14 @@ const projects = {
         preview: "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/main1555183767.jpg",
         category: 0,
         subcategory: 0,
-        images: [],
+        images: [
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/main1555183767.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/aqeer_main1555174708.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/bagneed_hotel_plaza_main1555175350.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/fish_market_main1555175402.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/lake_main1555175126.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/bab_mecca_main1555173303.jpg"
+        ],
         videos: []
     },
     {
