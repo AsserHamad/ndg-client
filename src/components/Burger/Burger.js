@@ -23,9 +23,15 @@ function Burger(props) {
                             <div className={lang + " menuText"}><div className="icon"><FaHome /></div>{navbar.home}</div>
                         </li>
                     </Link>
+                    <Link
+                    to="/projects"
+                    onClick={() => globalState.setPage({ page: "home" })}
+                    style={{ textDecoration: "inherit", fontSize: "inherit" }}
+                    >
                     <li>
                         <div className={lang + " menuText"}><div className="icon"><FaProjectDiagram /></div>{navbar.projects}</div>
                     </li>
+                    </Link>
                     <Link
                     to="/about"
                     onClick={() => globalState.setPage({ page: "about" })}
@@ -35,9 +41,15 @@ function Burger(props) {
                         <div className={lang + " menuText"}><div className="icon"><FaInfoCircle /></div>{navbar.about}</div>
                         </li>
                     </Link>
+                    <Link
+                    to="/services"
+                    onClick={() => globalState.setPage({ page: "services" })}
+                    style={{ textDecoration: "inherit", fontSize: "inherit" }}
+                    >
                     <li>
                         <div className={lang + " menuText"}><div className="icon"><FaServicestack /></div>{navbar.services}</div>
                     </li>
+                    </Link>
                     <li>
                         <div className={lang + " menuText"}><div className="icon"><FaPhone /></div>{navbar.contact}</div>
                     </li>

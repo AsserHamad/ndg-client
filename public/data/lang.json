@@ -29,7 +29,10 @@
             "area": "Area",
             "builtUpArea": "Built Up Area",
             "year": "Date of Completion",
-            "gallery": "Gallery"
+            "gallery": "Gallery",
+            "videoPresentations": "Video Presentations",
+            "images": "Images",
+            "videos": "Videos"
         }
     },
     "ar":{
@@ -54,6 +57,18 @@
             "startExploring": "ابدأ الاستكشاف",
             "back": "عودة",
             "next": "التالى"
+        },
+        "projectDetails": {
+            "projectDetails": "تفاصيل المشروع",
+            "owner": "صاحب المشروع",
+            "location": "الموقع",
+            "area": "المنطقة",
+            "builtUpArea": "المساحة المبنية",
+            "year": "تاريخ الانتهاء",
+            "gallery": "صور",
+            "videoPresentations": "عروض الفيديو",
+            "images": "صور",
+            "videos": "فيديو"
         }
     }
 }

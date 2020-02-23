@@ -3,6 +3,7 @@ import useGlobalState from "../../useGlobalState";
 import "./NavBar.css";
 import Burger from "../Burger/Burger";
 import NavBarLink from "./NavBarLink/NavBarLink";
+import { Link } from 'react-router-dom';
 
 function NavBar() {
   const globalState = useGlobalState(),
@@ -19,18 +20,19 @@ function NavBar() {
     <div>
       <nav id="navbar">
         <div className="nav-wrapper">
-          <div className="logo">
-            <a href="#home">
+        <Link
+        className="logo"
+        to="/"
+        onClick={() => globalState.setPage({ page: "home" })}
+        style={{ textDecoration: "inherit", fontSize: "inherit" }}
+        >
               <img src="/ndg.png" className="logo" alt="logo" />
-            </a>
-          </div>
+        </Link>
           <ul id="menu">
             <NavBarLink page={page} pageName="home" navbar={navbar} link="/" lang={lang} />
             <NavBarLink page={page} pageName="projects" navbar={navbar} link="/projects" lang={lang} />
             <NavBarLink page={page} pageName="about" navbar={navbar} link="/about" lang={lang} />
-            <li>
-              <span className={lang + " " + ((page==='services') ? "services" : "")}>{navbar.services}</span>
-            </li>
+            <NavBarLink page={page} pageName="services" navbar={navbar} link="/services" lang={lang} />
             <li>
               <span className={lang + " " + ((page==='contact') ? "contact" : "")}>{navbar.contact}</span>
             </li>

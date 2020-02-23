@@ -9,16 +9,18 @@ function ProjectMainDetails(props){
             subcategory = props.subcategory,
             projectDetails = props.projectDetails,
             lang = props.lang,
-            [currGallery, setCurrGallery] = useState(0);
+            [currGallery, setCurrGallery] = useState(0),
+            [modal, setModal] = useState({
+                src: '',
+                display: 'none'
+            });
 
-    function generateImages(){
-        let x = [];
-        for(let image in project.images)
-            x.push(<img key={image} src={project.images[image]} />);
-        return x;
-    }
     return(
-        <div className="main-container">
+        <div className={`main-container ${lang}`}>
+            <div className="modal" style={{display: modal.display}}>
+                <span className="close" onClick={() => setModal({display: 'none'})}>&times;</span>
+                <img className="modal-content" src={modal.src} />
+            </div>
             <div className="project-details">
                 <p className="project-details-title">{projectDetails.projectDetails}</p>
                 <p className="description">{project.description[lang]}</p>
@@ -42,10 +44,10 @@ function ProjectMainDetails(props){
                 <div className="select">
                     <div className="gallery-navbar">
                         <div onClick={() => setCurrGallery(0)} className={(currGallery==0 ? "navbarItem highlighted-navbar": "navbarItem" )}>
-                            01. Images
+                            01. {projectDetails.images}
                         </div>
                         <div onClick={() => setCurrGallery(1)} className={(currGallery==1 ? "navbarItem highlighted-navbar": "navbarItem" )}>
-                            02. Videos
+                            02. {projectDetails.videos}
                         </div>
                     </div>
                 </div>
@@ -54,13 +56,28 @@ function ProjectMainDetails(props){
                         <p className="titles project-details-title">{projectDetails.gallery}</p>
                         <div className="image-box">
                             <div className="image-div">
-                                {generateImages()}
+                                {project.images.map((image) => <img key={image} onClick={
+                                    (() => {
+                                        setModal({src: image, display: 'flex'})
+                                    }
+                                    )} src={image} style={{cursor: 'pointer'}} />)}
                             </div>
-                            {/* <img src={project.images[0]} /> */}
                         </div>
                     </div>
                     <div style={{display: (currGallery === 0) ? 'none' : 'block'}}>
-                        videos!
+                        <p className="titles project-details-title">{projectDetails.videoPresentations}</p>
+                        <div className="image-box">
+                            <div className="image-div">
+                                {project.videos.map((video) =>  
+                                <div key={video+Math.random()} className="video-presentation">
+                                    <video key={video} className="background-vide" controls>
+                                        <source key={video} src={video} type="video/mp4" />
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                )}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

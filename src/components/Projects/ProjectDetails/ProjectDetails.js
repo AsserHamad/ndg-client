@@ -32,17 +32,19 @@ function ProjectDetails(props){
     return(
         <div className="project-details-container">
             <div>
-                <div className="project-title">
+                <div className={`project-title title-${lang}`}>
                     <div>
                         <p>{project.title[lang]}</p>
-                        <div className="project-subtitle">
+                        <div className={`project-subtitle subtitle-${lang}`}>
                             <p>{project.location[lang]} - {project.owner[lang]}</p>
                         </div>
                     </div>
                 </div>
                 <div className="video-container">
                     <video className="background-video" autoPlay loop muted>
-                    <source src="http://techslides.com/demos/sample-videos/small.mp4" type="video/mp4" />
+                    <source src={
+                        project.videoPreview || "https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_1920_18MG.mp4"
+                        } type="video/mp4" />
                     Your browser does not support the video tag.
                     </video>
                 </div>

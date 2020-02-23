@@ -1,0 +1,16 @@
+.services-container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.main-services-container {
+    grid-area: 1 / 1 / 2 / 2;
+    color: black;
+}
+.what-we-do-container {
+    grid-area: 1 / 2 / 2 / 3;
+    color: black;
+}

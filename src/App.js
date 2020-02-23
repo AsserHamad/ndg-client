@@ -12,6 +12,7 @@ import useGlobalState from './useGlobalState';
 import Projects from './components/Projects/Projects';
 import ProjectsExplore from './components/Projects/ProjectsExplore/ProjectsExplore';
 import ProjectDetails from './components/Projects/ProjectDetails/ProjectDetails';
+import Services from './components/Services/Services';
 
 function App() {
   const globalState = useGlobalState();
@@ -31,6 +32,7 @@ function App() {
                   <Route exact path="/projects" component={Projects} />
                   <Route exact path="/projects/explore" component={ProjectsExplore} />
                   <Route exact path="/projects/:id" component={ProjectDetails} />
+                  <Route exact path="/services" component={Services} />
                   <Route path="/*" component={() => <Redirect to='/' />} />
                 </Switch>
               {/* </AnimatedSwitch> */}

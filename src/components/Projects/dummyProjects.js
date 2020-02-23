@@ -22,6 +22,7 @@ const projects = {
         builtUpArea: 37000,
         year: "2007",
         preview: "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/main1555183767.jpg",
+        videoPreview: "https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4",
         category: 0,
         subcategory: 0,
         images: [
@@ -32,7 +33,10 @@ const projects = {
             "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/lake_main1555175126.jpg",
             "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/bab_mecca_main1555173303.jpg"
         ],
-        videos: []
+        videos: [
+            "https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_1920_18MG.mp4",
+            "https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4"
+        ]
     },
     {
         id: 1,
