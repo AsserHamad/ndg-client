@@ -3,7 +3,7 @@
     /* right: 0; */
     overflow-x: hidden;
     overflow-y: hidden;
-    width: 90%;
+    width: 93%;
     height: 100%;
     bottom: 0;
     right: 0;
@@ -19,7 +19,7 @@
     right: 0;
     z-index: 10;
     position: absolute;
-    width: 90%;
+    width: 93%;
     display: flex;
     background-color: rgba(0,0,0,0.5);
     padding: 1.5%;

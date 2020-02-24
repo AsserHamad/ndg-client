@@ -22,7 +22,6 @@ function Projects() {
     function changePreviewNum() {
         setPreviewNum((previewNum + 1) % 3);
     }
-    console.log(dp)
     return(
     <div>
         <div id="ndg-info">

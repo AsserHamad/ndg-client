@@ -46,16 +46,13 @@ a {
   text-align: center;
   width: 100%;
 }
-@media (max-width: 768px) {
-  .nav-wrapper {
-    /* width: 90%; */
-  }
-}
+
 @media (max-width: 638px) {
   .nav-wrapper {
     width: 100%;
   }
 }
+
 /*   LOGO   */
 .logo {
   float: left;

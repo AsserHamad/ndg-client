@@ -46,7 +46,6 @@ const useGlobalState = () => {
     const [state, dispatch] = useContext(GlobalStateContext);
   
     const setLang = (lang) => {
-        console.log('lang is', lang)
       dispatch({ 
         type: SET_LANG, 
         payload: { 
