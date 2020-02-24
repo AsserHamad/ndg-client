@@ -17,8 +17,8 @@ function Services(){
     return(
         <div className="services-container">
             <div className="what-we-do-container">
-                <p className="wwd">{servicesText.whatWeDo}</p>
-                <div className="todo-brownies">
+                <p className={`wwd wwd-${lang}`}>{servicesText.whatWeDo}</p>
+                <div className={`todo-brownies todo-brownies-${lang}`}>
                     <p>
                         {servicesText.description}
                     </p>
@@ -27,9 +27,9 @@ function Services(){
             <div className="main-services-container">
                 {services.map((element) => 
                     <div className="service-div">
-                        <p className="service-title">{element.title[lang]}</p>
+                        <p className={`service-title service-title-${lang}`}>{element.title[lang]}</p>
                         <img src={element.image} />
-                        <ul className="list">
+                        <ul className={`list list-${lang}`}>
                         {element.items[lang].map((item) =>
                             <li>{item}</li>
                         )}
