@@ -25,7 +25,7 @@ function ProjectBlock(props) {
                     {project.title[lang]} - {project.location[lang]} <span><FaLongArrowAltRight /></span>
                 </div>
             </div>
-            <img src={project.preview} />
+            <img alt="Project Preview" src={project.preview} />
         </Link>
     )
 }

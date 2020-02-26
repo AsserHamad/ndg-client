@@ -28,7 +28,7 @@ function About() {
             <p className={`about-title about-title-${lang}`}>
               {element.title[lang]}
             </p>
-            <img src={element.image} />
+            <img alt="About Page" src={element.image} />
             <div className={`list list-${lang}`}>
               {element.text[lang].map(item => (
                 <li>{item}</li>

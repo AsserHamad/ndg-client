@@ -1,20 +1,22 @@
-#projects-container{
+.projects-container{
     position: absolute;
-    /* right: 0; */
-    overflow-x: hidden;
-    overflow-y: hidden;
     width: 93%;
     height: 100%;
     bottom: 0;
     right: 0;
     border-left: 1px solid #414145;
-    /* background-color: black; */
     display: flex;
     z-index: 1;
+    overflow-y: hidden;
+    overflow-x: hidden;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-#ndg-info {
+.projects-container-ar {
+    direction: rtl;
+}
+
+.ndg-info {
     top: 80px;
     right: 0;
     z-index: 10;
@@ -24,8 +26,15 @@
     background-color: rgba(0,0,0,0.5);
     padding: 1.5%;
 }
+
+.ndg-info-ar {
+    direction: rtl;
+    right: auto;
+    text-align: right;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 #ndg-info-text {
-    width: 85%;
     margin: auto;
     display: flex;
     align-items: center;
@@ -87,12 +96,11 @@
 }
 
 @media (max-width: 1024px){
-    #projects-container {
+    .projects-container {
         width: 100%;
-        right: 0;
     }
 
-    #ndg-info {
+    .ndg-info {
         display: none;
     }
 
@@ -153,7 +161,7 @@
     }
 }
 
-#yellow-box {
+.yellow-box {
     position: absolute;
     z-index: 3;
     width: 17%;
@@ -170,18 +178,18 @@
     /* background: linear-gradient(90deg, rgba(2,0,36,0) 0%, rgba(219,255,0,1) 35%, rgba(0,212,255,1) 35%); */
 }
 
-#yellow-box > p {
+.yellow-box > p {
     font-weight: bold;
     font-size: 0.8em;
 }
 
-#yellow-box span {
+.yellow-box span {
     margin-top: 10%;
     font-weight: bold;
     font-size: 300%;
 }
 
-#yellow-box div {
+.yellow-box div {
     /* margin-top: 70%; */
     bottom: 0;
     display: flex;
@@ -196,7 +204,7 @@
     text-decoration: none;
 }
 
-#project-image {
+.project-image {
     /* TODO: remove this ^ */
     width: 71%;
     height: 100%;
@@ -209,29 +217,38 @@
     background-size: cover;
 }
 
+.project-image-ar {
+    right: auto;
+    left: 0;
+
+}
+
 @media (max-width: 1024px) {
-    #project-image {
+    .project-image {
         width: 100%;
     }
 
-    #yellow-box {
+    .yellow-box {
         position: absolute;
         left: 0;
         width: 50%;
-        height: 40%;
+        height: 45%;
+    }
+    .yellow-box-ar {
+        left: auto;
+        right: 0;
     }
 
-    #yellow-box > p {
+    .yellow-box > p {
         font-size: 3vh;
     }
 
-    #yellow-box span {
+    .yellow-box span {
         font-size: 5vh;
     }
 }
 
-#explore-button {
-    width: 10%;
+.explore-button {
     position: fixed;
     bottom: 0;
     z-index: 20;
@@ -244,7 +261,14 @@
     color: white;
 }
 
-#previewNavigatingDiv {
+.explore-button-ar {
+    left: auto;
+    right: 0;
+    direction: rtl;
+
+}
+
+.previewNavigatingDiv {
     position: fixed;
     bottom: 0;
     right: 0;
@@ -254,6 +278,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.previewNavigatingDiv-ar {
+    right: auto;
+    left: 0;
+    direction: rtl;
 }
 
 .previewNavigatingButtons {
@@ -269,6 +299,7 @@
     align-items: center;
     justify-content: center;
     transition-duration: 0.2s;
+    border: 1px solid #35353A;
 }
 
 .previewNavigatingButtons:hover {
@@ -278,13 +309,26 @@
 }
 
 @media (max-width: 1024px) {
-    #previewNavigatingDiv {
+    .previewNavigatingDiv {
         width: 40%;
-        height: 8%;
+        height: 10%;
     }
 
-    #explore-button {
+    .explore-button {
         width: 40%;
-        height: 8%;
+        height: 10%;
     }
+}
+
+@media (orientation: landscape) and (max-width: 1024px) {
+    .previewNavigatingDiv {
+        width: 40%;
+        height: 15%;
+    }
+
+    .explore-button {
+        width: 20%;
+        height: 15%;
+    }
+
 }

@@ -3,7 +3,7 @@ import './App.css';
 import './pageTransitions/slideTransition.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, withRouter, Redirect, Switch } from 'react-router-dom';
-import { AnimatedSwitch } from 'react-router-transition';
+// import { AnimatedSwitch } from 'react-router-transition';
 import NavBar from './components/NavBar/NavBar';
 import Homepage from './components/Homepage/Homepage';
 import About from './components/About/About';

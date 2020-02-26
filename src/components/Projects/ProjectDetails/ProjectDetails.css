@@ -3,6 +3,10 @@
     flex-direction: column;
 }
 
+.project-details-container-ar {
+    direction: rtl;
+}
+
 .video-container {
     z-index: 1;
     opacity: 0.5;
@@ -13,7 +17,7 @@
     position: absolute;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     text-transform: uppercase;
-    font-size: 10vh;
+    font-size: 4.5em;
     display: flex;
     align-items: center;
     justify-content: left;
@@ -26,16 +30,22 @@
 
 .project-subtitle {
     border-top: 3px solid #F9BF26;
-    font-size: 3.5vh;
+    font-size: 0.6em;
     letter-spacing: 0.4vh;
     word-spacing: 0.5vh;
     padding: 1%;
+}
+
+.title-ar {
+    right: auto;
+    left: 0;
 }
 
 .title-ar, .subtitle-ar {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
     letter-spacing: normal;
+    word-spacing: normal;
     justify-content: right;
     text-align: right;
 }
@@ -46,16 +56,17 @@
     }
 
     .project-title {
-        width:90%;
-        height: 40%;
-        font-size: 1.8em;
+        width: 90%;
+        height: 30%;
+        font-size: 4vh;
         justify-content: left;
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 1024px) and (orientation: landscape) {
     .project-title {
-        height: 30%;
+        height: 100%;
+        font-size: 10vh;
     }
 
 }

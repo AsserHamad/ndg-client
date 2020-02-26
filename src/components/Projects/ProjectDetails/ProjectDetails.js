@@ -30,7 +30,7 @@ function ProjectDetails(props){
     }, [lang])
 
     return(
-        <div className="project-details-container">
+        <div className={`project-details-container project-details-container-${lang}`}>
             <div>
                 <div className={`project-title title-${lang}`}>
                     <div>

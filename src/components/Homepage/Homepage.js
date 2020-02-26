@@ -1,6 +1,5 @@
 import React from 'react';
 import './Homepage.css';
-import projects from '../Projects/dummyProjects';
 
 function Homepage() {
   return (

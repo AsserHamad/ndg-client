@@ -47,10 +47,8 @@ a {
   width: 100%;
 }
 
-@media (max-width: 638px) {
-  .nav-wrapper {
-    width: 100%;
-  }
+.nav-wrapper-ar {
+  direction: rtl;
 }
 
 /*   LOGO   */
@@ -64,9 +62,20 @@ a {
   text-transform: uppercase;
 }
 
+.logo-ar {
+  float: right;
+  margin-left: none;
+  margin-right: 45px;
+}
+
 @media (max-width: 820px) {
   .logo {
           margin-left: 25px;
+  }
+
+  .logo-ar {
+    margin-left: none;
+    margin-right: 25px;
   }
 }
 /*   NAVBAR LIST   */
@@ -80,6 +89,12 @@ a {
   text-align: right;
   transition: transform 0.5s ease-out;
   -webkit-transition: transform 0.5s ease-out;
+}
+#navbar ul.menu-ar {
+  margin-top: 10px;
+  float: right;
+  margin-right: 0.7%;
+  direction: rtl;
 }
 
 @media (max-width: 824px) {

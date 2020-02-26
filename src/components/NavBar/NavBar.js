@@ -19,16 +19,16 @@ function NavBar() {
   return (
     <div>
       <nav id="navbar">
-        <div className="nav-wrapper">
+        <div className={`nav-wrapper nav-wrapper${lang}`}>
         <Link
-        className="logo"
+        className={`logo logo-${lang}`}
         to="/"
         onClick={() => globalState.setPage({ page: "home" })}
         style={{ textDecoration: "inherit", fontSize: "inherit" }}
         >
               <img src="/ndg.png" className="logo" alt="logo" />
         </Link>
-          <ul id="menu">
+          <ul id="menu" className={`menu-${lang}`}>
             <NavBarLink page={page} pageName="home" navbar={navbar} link="/" lang={lang} />
             <NavBarLink page={page} pageName="projects" navbar={navbar} link="/projects" lang={lang} />
             <NavBarLink page={page} pageName="about" navbar={navbar} link="/about" lang={lang} />

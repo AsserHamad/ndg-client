@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Projects.css";
 
-import { FaLongArrowAltRight } from 'react-icons/fa';
+import { FaLongArrowAltRight, FaLongArrowAltLeft } from 'react-icons/fa';
 import useGlobalState from "../../useGlobalState";
 import { Link } from "react-router-dom";
 import dp from "./dummyProjects";
@@ -24,7 +24,7 @@ function Projects() {
     }
     return(
     <div>
-        <div id="ndg-info">
+        <div className={`ndg-info ndg-info-${lang}`}>
             <div id="ndg-info-text">
                 {projectsText.description}
             </div>
@@ -33,17 +33,15 @@ function Projects() {
                     <div id="ndg-info-button-text">
                         {projectsText.viewProjectsButton}
                     </div>
-                    <div id="ndg-info-button-arrow">
-                        <FaLongArrowAltRight />
-                    </div>
+                    { (lang === 'en') ? <FaLongArrowAltRight /> : <FaLongArrowAltLeft /> }
                 </button>
             </Link>
         </div>
-        <div id="projects-container">
+        <div className={`projects-container projects-container-${lang}`}>
             <div id="project-title">
                 <div id="title-box">
                 <div id="box-1" />
-                <div id="yellow-box">
+                <div className={`yellow-box yellow-box-${lang}`}>
                     <p>{categories[lang][projects[previewNum].category]}</p>
                     <span>{projects[previewNum].title[lang]}</span>
                     <div>
@@ -56,7 +54,7 @@ function Projects() {
                         }
                     }}>
                         <p>
-                        {projectsText.viewProjectLink} <FaLongArrowAltRight />
+                        {projectsText.viewProjectLink} { (lang === 'en') ? <FaLongArrowAltRight /> : <FaLongArrowAltLeft /> }
                         </p>
                     </Link>
                     </div>
@@ -64,19 +62,19 @@ function Projects() {
                 <div id="box-2" />
             </div>
             </div>
-            <div id="project-image" style={{backgroundImage: `url(${projects[previewNum].preview})`}} />
+            <div className={`project-image project-image-${lang}`} style={{backgroundImage: `url(${projects[previewNum].preview})`}} />
         </div>
             <Link to="/projects/explore">
-                <button id="explore-button">
+                <button className={`explore-button explore-button-${lang}`}>
                     <div id="ndg-info-button-text">
                         {projectsText.startExploring}
                     </div>
                     <div id="ndg-info-button-arrow">
-                        <FaLongArrowAltRight />
+                    { (lang === 'en') ? <FaLongArrowAltRight /> : <FaLongArrowAltLeft /> }
                     </div>
                 </button>
             </Link>
-            <div id="previewNavigatingDiv">
+            <div className={`previewNavigatingDiv previewNavigatingDiv-${lang}`}>
                 <button onClick={changePreviewNum} className="previewNavigatingButtons">&lt; {projectsText.back}</button>
                 <button onClick={changePreviewNum} className="previewNavigatingButtons">{projectsText.next} &gt;</button>
             </div>

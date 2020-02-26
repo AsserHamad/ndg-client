@@ -15,8 +15,8 @@ function Services(){
             });
       }, [lang]);
     return(
-        <div className="services-container">
-            <div className="what-we-do-container">
+        <div className={`services-container services-container-${lang}`}>
+            <div className={`what-we-do-container what-we-do-container-${lang}`}>
                 <p className={`wwd wwd-${lang}`}>{servicesText.whatWeDo}</p>
                 <div className={`todo-brownies todo-brownies-${lang}`}>
                     <p>
@@ -28,7 +28,7 @@ function Services(){
                 {services.map((element) => 
                     <div className="service-div">
                         <p className={`service-title service-title-${lang}`}>{element.title[lang]}</p>
-                        <img src={element.image} />
+                        <img alt="services pic" src={element.image} />
                         <ul className={`list list-${lang}`}>
                         {element.items[lang].map((item) =>
                             <li>{item}</li>
@@ -38,7 +38,8 @@ function Services(){
             )}
                 
             </div>
-        </div>)
+        </div>
+    )
 }
 
 export default Services;

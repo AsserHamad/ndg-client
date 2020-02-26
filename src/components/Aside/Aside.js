@@ -12,7 +12,7 @@ function Aside(props) {
       .then(res => setPageName(res[lang].pageNames[props.page]));
   }, [globalState.page]);
   return (
-      <div id="aside-container">
+      <div className={`aside-container aside-container-${lang}`}>
         <div className={"header " + lang}>
           <p>{pageName ? pageName : lang === 'en' ? "Home" : "الرئيسية"}</p>
         </div>

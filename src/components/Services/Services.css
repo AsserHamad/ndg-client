@@ -1,10 +1,9 @@
 .services-container {
-    /* background-color: white;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px; */
     display: flex;
+}
+
+.services-container-ar {
+    direction: rtl
 }
 
 .main-services-container {
@@ -56,6 +55,11 @@
     background-image: url(/images/what-we-do.png);
     background-size: cover;
     z-index: 10;
+}
+
+.what-we-do-container-ar {
+    right: auto;
+    left: 6em;
 }
 
 .wwd {

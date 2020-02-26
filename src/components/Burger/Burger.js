@@ -7,20 +7,21 @@ import './Burger.css';
 import { FaHome, FaProjectDiagram, FaInfoCircle, FaServicestack, FaPhone } from 'react-icons/fa';
 
 function Burger(props) {
-    const globalState = useGlobalState();
-    const lang = globalState.lang.lang;
-    const navbar = props.navbar;
+    const globalState = useGlobalState(),
+            lang = globalState.lang.lang,
+            navbar = props.navbar;
     return(
-        <div id="burger">
+        <div className={`burger burger-${lang}`}>
+            {(lang === 'en') ? 
             <Menu right>
-                <ul id="menu">
+                <ul className={`menu menu-${lang}`}>
                     <Link
                     to="/"
                     onClick={() => globalState.setPage({ page: "home" })}
                     style={{ textDecoration: "inherit", fontSize: "inherit" }}
                     >
                         <li>
-                            <div className={lang + " menuText"}><div className="icon"><FaHome /></div>{navbar.home}</div>
+                            <div className={`menuText menuText-${lang}`}><div className="icon"><FaHome /></div>{navbar.home}</div>
                         </li>
                     </Link>
                     <Link
@@ -29,7 +30,7 @@ function Burger(props) {
                     style={{ textDecoration: "inherit", fontSize: "inherit" }}
                     >
                     <li>
-                        <div className={lang + " menuText"}><div className="icon"><FaProjectDiagram /></div>{navbar.projects}</div>
+                        <div className={`menuText menuText-${lang}`}><div className="icon"><FaProjectDiagram /></div>{navbar.projects}</div>
                     </li>
                     </Link>
                     <Link
@@ -38,7 +39,7 @@ function Burger(props) {
                     style={{ textDecoration: "inherit", fontSize: "inherit" }}
                     >
                         <li>
-                        <div className={lang + " menuText"}><div className="icon"><FaInfoCircle /></div>{navbar.about}</div>
+                        <div className={`menuText menuText-${lang}`}><div className="icon"><FaInfoCircle /></div>{navbar.about}</div>
                         </li>
                     </Link>
                     <Link
@@ -47,14 +48,57 @@ function Burger(props) {
                     style={{ textDecoration: "inherit", fontSize: "inherit" }}
                     >
                     <li>
-                        <div className={lang + " menuText"}><div className="icon"><FaServicestack /></div>{navbar.services}</div>
+                        <div className={`menuText menuText-${lang}`}><div className="icon"><FaServicestack /></div>{navbar.services}</div>
                     </li>
                     </Link>
                     <li>
-                        <div className={lang + " menuText"}><div className="icon"><FaPhone /></div>{navbar.contact}</div>
+                        <div className={`menuText menuText-${lang}`}><div className="icon"><FaPhone /></div>{navbar.contact}</div>
                     </li>
                 </ul>
-            </Menu>
+            </Menu> : 
+            <Menu left>
+                <ul className="menu">
+                    <Link
+                    to="/"
+                    onClick={() => globalState.setPage({ page: "home" })}
+                    style={{ textDecoration: "inherit", fontSize: "inherit" }}
+                    >
+                        <li>
+                            <div className={`menuText menuText-${lang}`}><div className="icon"><FaHome /></div>{navbar.home}</div>
+                        </li>
+                    </Link>
+                    <Link
+                    to="/projects"
+                    onClick={() => globalState.setPage({ page: "home" })}
+                    style={{ textDecoration: "inherit", fontSize: "inherit" }}
+                    >
+                    <li>
+                        <div className={`menuText menuText-${lang}`}><div className="icon"><FaProjectDiagram /></div>{navbar.projects}</div>
+                    </li>
+                    </Link>
+                    <Link
+                    to="/about"
+                    onClick={() => globalState.setPage({ page: "about" })}
+                    style={{ textDecoration: "inherit", fontSize: "inherit" }}
+                    >
+                        <li>
+                        <div className={`menuText menuText-${lang}`}><div className="icon"><FaInfoCircle /></div>{navbar.about}</div>
+                        </li>
+                    </Link>
+                    <Link
+                    to="/services"
+                    onClick={() => globalState.setPage({ page: "services" })}
+                    style={{ textDecoration: "inherit", fontSize: "inherit" }}
+                    >
+                    <li>
+                        <div className={`menuText menuText-${lang}`}><div className="icon"><FaServicestack /></div>{navbar.services}</div>
+                    </li>
+                    </Link>
+                    <li>
+                        <div className={`menuText menuText-${lang}`}><div className="icon"><FaPhone /></div>{navbar.contact}</div>
+                    </li>
+                </ul>
+                </Menu> }
         </div>
     )
 };

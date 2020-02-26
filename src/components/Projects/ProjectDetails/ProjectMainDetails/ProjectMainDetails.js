@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './ProjectMainDetails.css';
 
 // import { FaAngleDown } from 'react-icons/fa';
 
 function ProjectMainDetails(props){
     const  project = props.project,
-            category = props.category,
-            subcategory = props.subcategory,
+            // category = props.category,
+            // subcategory = props.subcategory,
             projectDetails = props.projectDetails,
             lang = props.lang,
             [currGallery, setCurrGallery] = useState(0),
@@ -16,28 +16,28 @@ function ProjectMainDetails(props){
             });
 
     return(
-        <div className={`main-container ${lang}`}>
+        <div className={`main-container main-container-${lang}`}>
             <div className="modal" style={{display: modal.display}}>
                 <span className="close" onClick={() => setModal({display: 'none'})}>&times;</span>
-                <img className="modal-content" src={modal.src} />
+                <img alt="details" className="modal-content" src={modal.src} />
             </div>
             <div className="project-details">
                 <p className="project-details-title">{projectDetails.projectDetails}</p>
                 <p className="description">{project.description[lang]}</p>
                 <div className="detail">
-                    <p><span className="titles">{projectDetails.owner}: </span>{project.owner[lang]}</p>
+                    <p><span className="titles">{projectDetails.owner}:<br /> </span>{project.owner[lang]}</p>
                 </div>
                 <div className="detail">
-                    <p><span className="titles">{projectDetails.location}: </span>{project.location[lang]}</p>
+                    <p><span className="titles">{projectDetails.location}:<br /> </span>{project.location[lang]}</p>
                 </div>
                 <div className="detail">
-                    <p><span className="titles">{projectDetails.area}: </span>{project.area}</p>
+                    <p><span className="titles">{projectDetails.area}:<br /> </span>{project.area}</p>
                 </div>
                 <div className="detail">
-                    <p><span className="titles">{projectDetails.builtUpArea}: </span>{project.builtUpArea}</p>
+                    <p><span className="titles">{projectDetails.builtUpArea}:<br /> </span>{project.builtUpArea}</p>
                 </div>
                 <div className="detail">
-                    <p><span className="titles">{projectDetails.year}: </span>{project.year}</p>
+                    <p><span className="titles">{projectDetails.year}:<br /> </span>{project.year}</p>
                 </div>
             </div>
             <div className="project-media">
@@ -60,7 +60,7 @@ function ProjectMainDetails(props){
                                     (() => {
                                         setModal({src: image, display: 'flex'})
                                     }
-                                    )} src={image} style={{cursor: 'pointer'}} />)}
+                                    )} src={image} alt="gallery" style={{cursor: 'pointer'}} />)}
                             </div>
                         </div>
                     </div>
