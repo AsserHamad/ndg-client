@@ -1,32 +1,47 @@
-import React from 'react';
-import './NavBar.css';
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import React, { useState, useEffect } from "react";
+import useGlobalState from "../../useGlobalState";
+import "./NavBar.css";
+import Burger from "../Burger/Burger";
+import NavBarLink from "./NavBarLink/NavBarLink";
+import { Link } from 'react-router-dom';
 
 function NavBar() {
+  const globalState = useGlobalState(),
+        [navbar, setNavbar] = useState({}),
+        lang = globalState.lang.lang,
+        page = globalState.page.page;
+  useEffect(() => {
+    fetch("/data/lang.json")
+      .then(res => res.json())
+      .then(res => setNavbar(res[lang].navbar));
+  }, []);
 
   return (
-            <Navbar bg="transparent" expand="lg">
-                <img src="ndg.png" className="logo" alt="logo" />
-                <Navbar.Toggle className="b" aria-controls="basic-navbar-nav" />
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="mr-auto">
-                        <Nav.Link className="navLinks">Home</Nav.Link>
-                        <NavDropdown title="PROJECTS" className="navLinks" id="basic-nav-dropdown">
-                            URBAN DESIGN
-                            <NavDropdown.Item href="#action/3.2">Urban Design</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Landscape</NavDropdown.Item>
-                            Master Planning
-                            <NavDropdown.Item href="#action/3.2">Urban Planning</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Housing</NavDropdown.Item>
-                            Architecture
-                            <NavDropdown.Item href="#action/3.2">Interior Design</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.3">Architecture</NavDropdown.Item>
-                        </NavDropdown>
-                        <Nav.Link className="navLinks">Link</Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
-            </Navbar>
+    <div>
+      <nav id="navbar">
+        <div className={`nav-wrapper nav-wrapper${lang}`}>
+        <Link
+        className={`logo logo-${lang}`}
+        to="/"
+        onClick={() => globalState.setPage({ page: "home" })}
+        style={{ textDecoration: "inherit", fontSize: "inherit" }}
+        >
+              <img src="/ndg.png" className="logo" alt="logo" />
+        </Link>
+          <ul id="menu" className={`menu-${lang}`}>
+            <NavBarLink page={page} pageName="home" navbar={navbar} link="/" lang={lang} />
+            <NavBarLink page={page} pageName="projects" navbar={navbar} link="/projects" lang={lang} />
+            <NavBarLink page={page} pageName="about" navbar={navbar} link="/about" lang={lang} />
+            <NavBarLink page={page} pageName="services" navbar={navbar} link="/services" lang={lang} />
+            <li>
+              <span className={lang + " " + ((page==='contact') ? "contact" : "")}>{navbar.contact}</span>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <Burger navbar={navbar} />
+    </div>
   );
 }
-  
+
 export default NavBar;

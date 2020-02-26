@@ -1,0 +1,90 @@
+{
+  "en": {
+    "navbar": {
+      "home": "Home",
+      "projects": "Projects",
+      "services": "Services",
+      "about": "About Us",
+      "contact": "Contact Us"
+    },
+    "pageNames": {
+      "home": "Home",
+      "projects": "Projects",
+      "services": "Services",
+      "about": "About",
+      "contact": "Contact Us"
+    },
+    "projects": {
+      "description": "As a multidisciplinary firm, we maintain considerable experience, skills and resources to undertake a wide variety of projects. NDG was started in 1999 and serves a local and national client base. Customers recognize the firm’s ability to provide and coordinate a broad spectrum of specialized professional services through our highly qualified staff  and the use of an extensive professional",
+      "viewProjectsButton": "View All Projects",
+      "viewProjectLink": "View Project",
+      "startExploring": "Start Exploring",
+      "back": "back",
+      "next": "next"
+    },
+    "projectDetails": {
+      "projectDetails": "Project Details",
+      "owner": "Owner",
+      "location": "Location",
+      "area": "Area",
+      "builtUpArea": "Built Up Area",
+      "year": "Date of Completion",
+      "gallery": "Gallery",
+      "videoPresentations": "Video Presentations",
+      "images": "Images",
+      "videos": "Videos"
+    },
+    "services": {
+      "whatWeDo": "What We Do",
+      "description": "NATURE Design Group (NDG) is a full-service professional firm that provides Strategic & regional planning ,urban design, landscape architecture, architecture, interior design and, engineering services in all key engineering disciplines: mechanical, electrical, structural, civil, sanitary, and fire protection. Known as a leader in Smart Growth and sustainable planning and building practices, the firm designs redevelopment and revitalization plans for cities and towns that have all the elements needed to create vibrant and economically vital urban environments."
+    },
+    "about": {
+      "aboutUs": "About Us",
+      "corporateOverview": "CORPORATE OVERVIEW"
+    }
+  },
+  "ar": {
+    "navbar": {
+      "home": "الرئيسية",
+      "projects": "المشاريع",
+      "services": "الخدمات",
+      "about": "نبذة عنا",
+      "contact": "إتصل بنا"
+    },
+    "pageNames": {
+      "home": "الرئيسية",
+      "projects": "المشاريع",
+      "services": "الخدمات",
+      "about": "نبذة عنا",
+      "contact": "إتصل بنا"
+    },
+    "projects": {
+      "description": "بصفتنا شركة متعددة التخصصات ، فإننا نحافظ على خبرة ومهارات وموارد كبيرة للقيام بمجموعة واسعة من المشاريع. بدأت NDG في عام 1999 وتخدم قاعدة عملاء محلية ووطنية. يدرك العملاء قدرة الشركة على توفير وتنسيق مجموعة واسعة من الخدمات المهنية المتخصصة من خلال موظفينا المؤهلين تأهيلا عاليا واستخدام محترف واسع النطاق",
+      "viewProjectsButton": "عرض جميع المشاريع",
+      "viewProjectLink": "عرض مشروع",
+      "startExploring": "ابدأ الاستكشاف",
+      "back": "عودة",
+      "next": "التالى"
+    },
+    "projectDetails": {
+      "projectDetails": "تفاصيل المشروع",
+      "owner": "صاحب المشروع",
+      "location": "الموقع",
+      "area": "المنطقة",
+      "builtUpArea": "المساحة المبنية",
+      "year": "تاريخ الانتهاء",
+      "gallery": "صور",
+      "videoPresentations": "عروض الفيديو",
+      "images": "صور",
+      "videos": "فيديو"
+    },
+    "services": {
+      "whatWeDo": "الذي نفعله",
+      "description": "مجموعة NATURE Design Group (NDG) هي شركة محترفة تقدم خدمات كاملة ، حيث توفر التخطيط الاستراتيجي والإقليمي ، والتصميم الحضري ، والهندسة المعمارية للمناظر الطبيعية ، والهندسة المعمارية ، والتصميم الداخلي ، والخدمات الهندسية في جميع التخصصات الهندسية الرئيسية: الميكانيكية والكهربائية والهيكلية والمدنية والصحية ، والحماية من الحرائق. تُعرف الشركة ، التي تُعرف بأنها رائدة في مجال النمو الذكي وممارسات التخطيط والبناء المستدامين ، خطط إعادة التطوير والتنشيط للمدن والبلدات التي تحتوي على جميع العناصر اللازمة لإنشاء بيئات حضرية حيوية وحيوية من الناحية الاقتصادية."
+    },
+    "about": {
+      "aboutUs": "معلومات عنا",
+      "corporateOverview": "لمحة عن الشركة"
+    }
+  }
+}
