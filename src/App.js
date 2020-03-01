@@ -13,6 +13,8 @@ import Projects from './components/Projects/Projects';
 import ProjectsExplore from './components/Projects/ProjectsExplore/ProjectsExplore';
 import ProjectDetails from './components/Projects/ProjectDetails/ProjectDetails';
 import Services from './components/Services/Services';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const globalState = useGlobalState();
@@ -33,10 +35,12 @@ function App() {
                   <Route exact path="/projects/explore" component={ProjectsExplore} />
                   <Route exact path="/projects/:id" component={ProjectDetails} />
                   <Route exact path="/services" component={Services} />
+                  <Route exact path="/contact" component={Contact} />
                   <Route path="/*" component={() => <Redirect to='/' />} />
                 </Switch>
               {/* </AnimatedSwitch> */}
           </div>
+          {/* <Footer /> */}
     </div>
   );
 }

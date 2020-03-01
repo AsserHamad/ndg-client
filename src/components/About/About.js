@@ -3,7 +3,6 @@ import './About.css';
 import useGlobalState from "../../useGlobalState";
 import { FaPlay } from 'react-icons/fa';
 import CountUp from 'react-countup';
-// import services from './dummyServices';
 
 function About(){
     const globalState = useGlobalState(),
@@ -45,7 +44,7 @@ function About(){
                 <div className={`about-div`}>
                   <div>
                     <img alt="About Page" src={`http://www.naturedesigngroup.com/web_test/public/Uploads/aboutus/image/en/1(1)1555170414.jpg`} />
-                    <button className={`button`} onClick={
+                    <button className={`button button-${lang}`} onClick={
                                     (() => {
                                         setModal({display: 'flex'})
                                     }
@@ -89,7 +88,7 @@ function About(){
                 <div className={`about-div`}>
                   <div>
                     <img alt="About Page" src={`http://www.naturedesigngroup.com/web_test/public/Uploads/aboutus/image/en/1(1)1555170414.jpg`} />
-                    <button className={`button`} onClick={
+                    <button className={`button button-${lang}`} onClick={
                                     (() => {
                                         setModal({display: 'flex'})
                                     }

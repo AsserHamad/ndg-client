@@ -12,7 +12,7 @@
       "projects": "Projects",
       "services": "Services",
       "about": "About",
-      "contact": "Contact Us"
+      "contact": "Contact"
     },
     "projects": {
       "description": "As a multidisciplinary firm, we maintain considerable experience, skills and resources to undertake a wide variety of projects. NDG was started in 1999 and serves a local and national client base. Customers recognize the firm’s ability to provide and coordinate a broad spectrum of specialized professional services through our highly qualified staff  and the use of an extensive professional",
@@ -47,6 +47,30 @@
       "bua": "Millions BUA",
       "projects": "90+ Projects",
       "years": "18+ Years"
+    },
+    "contact": {
+      "contactUs": "Contact Us:",
+      "write": "write:",
+      "call": "call:",
+      "visit": "visit:",
+      "visitText": "F41, 4TH FLOOR, BUILDING NO.6 AL‐GIHAD ST., LEBANON SQUARE, MOHANDESSIN ,GIZA, EGYPT",
+      "getInTouch": "GET IN TOUCH",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "orderProject": "Order Project",
+      "support": "Support",
+      "otherQuestions": "Other Questions",
+      "message": "Message",
+      "send": "Send",
+      "getInTouchText0" : "NATURE DESIGN GROUP CO. - N.D.G",
+      "getInTouchText1" : "SINCE 1999",
+      "getInTouchText2" : "ARCHITECTURE–URBAN PLANNING –INFRASTRUCTURE PLANNING -URBAN DESIGN – LANDSCAPE ARCHITECTURE",
+      "getInTouchText3" : "STRUCTURAL ENGINEERING – FEASIBILITY STUDIES ADDRESS: F41, 4TH FLOOR, BUILDING NO.6 AL‐GIHAD ST.,LEBANON SQUARE, MOHANDESSIN ,GIZA, EGYPT",
+      "getInTouchText4" : "POSTAL CODE 12411",
+      "getInTouchText5" : "DUBAI :OFFICE NO. 503‐06 ACICO GULF REAL ESTATE DUBAI BRANCH ,PORTSAID.",
+      "getInTouchText6" : "POSTAL CODE : 393210"
     }
   },
   "ar": {
@@ -97,6 +121,30 @@
       "bua": "ملايين المساحة المبنية",
       "projects": "90+ المشاريع",
       "years": "18+ سنوات"
+    },
+    "contact": {
+      "contactUs": "اتصل بنا:",
+      "write": "إرسال:",
+      "call": "مكالمة:",
+      "visit": "زيارة:",
+      "visitText": "F41 ، الطابق الرابع ، مبنى رقم 6 شارع الجهاد ، ميدان لبنان ، المهندسين ، الجيزة ، مصر",
+      "getInTouch": "ابقى على تواصل",
+      "name": "اسم",
+      "email": "البريد الإلكتروني",
+      "phone": "هاتف",
+      "subject": "موضوع",
+      "orderProject": "طلب مشروع",
+      "support": "الدعم",
+      "otherQuestions": "اسئلة اخرى",
+      "message": "الرسالة",
+      "send": "أرسل",
+      "getInTouchText0" : "مجموعة تصميم الطبيعة - N.D.G",
+      "getInTouchText1" : "منذ 1999",
+      "getInTouchText2" : "العمارة - التخطيط الحضري - تخطيط البنية التحتية - التصميم الأوروبي - هندسة المناظر الطبيعية",
+      "getInTouchText3" : "الهندسة الهيكلية - عنوان دراسات الجدوى: F41 ، الطابق الرابع ، مبنى رقم 6 شارع الجهاد ، ميدان لبنان ، المهندسين ، الجيزة ، مصر",
+      "getInTouchText4" : "الرمز البريدي 12411",
+      "getInTouchText5" : "دبي: المكتب رقم 503 - 06 أسيكو الخليج العقارية فرع دبي ، بورتسعيد.",
+      "getInTouchText6" : "الرمز البريدي: 393210"
     }
   }
 }

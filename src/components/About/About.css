@@ -50,7 +50,7 @@
 
 .about-us-container-ar {
   right: auto;
-  left: 6em;
+  left: 7%;
 }
 
 .abtus {
@@ -131,6 +131,10 @@
   height: 8vh;
   width: 14vw;
   transition-duration: 0.2s;
+}
+
+.button-ar {
+  transform: translate(-30vw, -50%);
 }
 
 .button-about-us {
@@ -233,6 +237,25 @@
   font-size: 0.7em;
   padding: 0.2vw 1vw;
   border-left: 2px solid #F9BF26;
+}
+
+@media (max-width: 1024px) {
+  .corporate-overview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+
+  .div11 {
+    font-size: 1.7em;
+  }
+
+  .div22 {
+    font-size: 0.8em;
+    padding: 5%;
+  }
 }
 
 

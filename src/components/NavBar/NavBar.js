@@ -33,9 +33,7 @@ function NavBar() {
             <NavBarLink page={page} pageName="projects" navbar={navbar} link="/projects" lang={lang} />
             <NavBarLink page={page} pageName="about" navbar={navbar} link="/about" lang={lang} />
             <NavBarLink page={page} pageName="services" navbar={navbar} link="/services" lang={lang} />
-            <li>
-              <span className={lang + " " + ((page==='contact') ? "contact" : "")}>{navbar.contact}</span>
-            </li>
+            <NavBarLink page={page} pageName="contact" navbar={navbar} link="/contact" lang={lang} />
           </ul>
         </div>
       </nav>
