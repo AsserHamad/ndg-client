@@ -3,7 +3,7 @@ const projects = {
     {
         id: 0,
         title: {
-            en: "SunPark (Maasara)",
+            en: "Sun Park (Maasara)",
             ar:  "سان بارك (المعصرة)"
         },
         description: {
@@ -41,7 +41,7 @@ const projects = {
     {
         id: 1,
         title: {
-            en: "AlAqeer archeologyDistrict",
+            en: "AlAqeer archeology District",
             ar:  "العقير الأثرية"
         },
         description: {
@@ -62,8 +62,18 @@ const projects = {
         preview: "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/aqeer_main1555174708.jpg",
         category: 0,
         subcategory: 0,
-        images: [],
-        videos: []
+        images: [
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/main1555183767.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/aqeer_main1555174708.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/bagneed_hotel_plaza_main1555175350.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/fish_market_main1555175402.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/lake_main1555175126.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/bab_mecca_main1555173303.jpg"
+        ],
+        videos: [
+            "https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_1920_18MG.mp4",
+            "https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4"
+        ]
     },
     {
         id: 2,
@@ -89,8 +99,18 @@ const projects = {
         preview: "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/aldahab_corridor_main1555174760.jpg",
         category: 0,
         subcategory: 0,
-        images: [],
-        videos: []
+        images: [
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/main1555183767.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/aqeer_main1555174708.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/bagneed_hotel_plaza_main1555175350.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/fish_market_main1555175402.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/lake_main1555175126.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/bab_mecca_main1555173303.jpg"
+        ],
+        videos: [
+            "https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_1920_18MG.mp4",
+            "https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4"
+        ]
     },
     {
         id: 3,
@@ -116,8 +136,18 @@ const projects = {
         preview: "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/alnada_main1555174859.jpg",
         category: 2,
         subcategory: 3,
-        images: [],
-        videos: []
+        images: [
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/main1555183767.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/aqeer_main1555174708.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/bagneed_hotel_plaza_main1555175350.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/fish_market_main1555175402.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/lake_main1555175126.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/bab_mecca_main1555173303.jpg"
+        ],
+        videos: [
+            "https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_1920_18MG.mp4",
+            "https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4"
+        ]
     },
     {
         id: 4,
@@ -143,8 +173,18 @@ const projects = {
         preview: "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/bab_mecca_main1555173303.jpg",
         category: 2,
         subcategory: 3,
-        images: [],
-        videos: []
+        images: [
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/main1555183767.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/aqeer_main1555174708.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/bagneed_hotel_plaza_main1555175350.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/fish_market_main1555175402.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/lake_main1555175126.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/bab_mecca_main1555173303.jpg"
+        ],
+        videos: [
+            "https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_1920_18MG.mp4",
+            "https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4"
+        ]
     },
     {
         id: 5,
@@ -170,8 +210,18 @@ const projects = {
         preview: "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/lake_main1555175126.jpg",
         category: 2,
         subcategory: 3,
-        images: [],
-        videos: []
+        images: [
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/main1555183767.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/aqeer_main1555174708.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/bagneed_hotel_plaza_main1555175350.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/fish_market_main1555175402.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/lake_main1555175126.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/bab_mecca_main1555173303.jpg"
+        ],
+        videos: [
+            "https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_1920_18MG.mp4",
+            "https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4"
+        ]
     },
     {
         id: 6,
@@ -197,8 +247,18 @@ const projects = {
         preview: "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/fish_market_main1555175402.jpg",
         category: 2,
         subcategory: 3,
-        images: [],
-        videos: []
+        images: [
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/main1555183767.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/aqeer_main1555174708.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/bagneed_hotel_plaza_main1555175350.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/fish_market_main1555175402.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/lake_main1555175126.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/bab_mecca_main1555173303.jpg"
+        ],
+        videos: [
+            "https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_1920_18MG.mp4",
+            "https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4"
+        ]
     },
     {
         id: 7,
@@ -224,8 +284,18 @@ const projects = {
         preview: "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/bagneed_hotel_plaza_main1555175350.jpg",
         category: 2,
         subcategory: 3,
-        images: [],
-        videos: []
+        images: [
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/main1555183767.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/aqeer_main1555174708.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/bagneed_hotel_plaza_main1555175350.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/fish_market_main1555175402.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/lake_main1555175126.jpg",
+            "http://www.naturedesigngroup.com/web_test/public/Uploads/projects/en/bab_mecca_main1555173303.jpg"
+        ],
+        videos: [
+            "https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_1920_18MG.mp4",
+            "https://file-examples.com/wp-content/uploads/2017/04/file_example_MP4_480_1_5MG.mp4"
+        ]
     }],
 
     categories: {
