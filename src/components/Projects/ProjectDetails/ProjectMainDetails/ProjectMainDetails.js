@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
 import './ProjectMainDetails.css';
 
-// import { FaAngleDown } from 'react-icons/fa';
-
 function ProjectMainDetails(props){
     const  project = props.project,
-            // category = props.category,
-            // subcategory = props.subcategory,
             projectDetails = props.projectDetails,
             lang = props.lang,
             [currGallery, setCurrGallery] = useState(0),
@@ -14,6 +10,7 @@ function ProjectMainDetails(props){
                 src: '',
                 display: 'none'
             });
+            console.log('project', project, 'project details', projectDetails);
 
     return(
         <div className={`main-container main-container-${lang}`}>
@@ -34,7 +31,7 @@ function ProjectMainDetails(props){
                     <p><span className="titles">{projectDetails.area}:<br /> </span>{project.area}</p>
                 </div>
                 <div className="detail">
-                    <p><span className="titles">{projectDetails.builtUpArea}:<br /> </span>{project.builtUpArea}</p>
+                    {/* <p><span className="titles">{projectDetails.builtUpArea}:<br /> </span>{project.builtUpArea}</p> */}
                 </div>
                 <div className="detail">
                     <p><span className="titles">{projectDetails.year}:<br /> </span>{project.year}</p>

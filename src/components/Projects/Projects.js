@@ -20,17 +20,13 @@ function Projects() {
     useEffect(() => {
         fetch("/data/lang.json")
           .then(res => res.json())
-          .then(res => {
-              setProjectsText(res[lang].projects);
-          });
+          .then(res => setProjectsText(res[lang].projects));
     }, [])
     useEffect(() => {
-        fetch("http://localhost:5000/api/projects/explore")
+        const api = `${(process.env.NODE_ENV === 'development') ? 'http://localhost:5000' : ''}/api/projects/`
+        fetch(api)
           .then(res => res.json())
-          .then(res => {
-              console.log(res);
-              setProjects(res);
-          });
+          .then(res => setProjects(res));
     }, [])
     function changePreviewNum(num) {
         setPreviewNum((previewNum === 0 && num === -1) ? projects.length-1 : (previewNum + num) % projects.length);
@@ -41,7 +37,7 @@ function Projects() {
             <div id="ndg-info-text">
                 {projectsText.description}
             </div>
-            <Link id="ndg-info-button" className="link" to="/projects/explore">
+            <Link id="ndg-info-button" className="link" to={{pathname: "/projects/explore", projects}}>
                 <button>
                     <div id="ndg-info-button-text">
                         {projectsText.viewProjectsButton}
@@ -59,7 +55,7 @@ function Projects() {
                     <span>{projects[previewNum].title[lang]}</span>
                     <div>
                     <Link className="link" to={{
-                        pathname: `/projects/${previewNum}`,
+                        pathname: `/projects/${projects[previewNum]._id}`,
                         projectBlock:{
                             project: projects[previewNum],
                             category: categories[lang][projects[previewNum].category],
@@ -77,7 +73,7 @@ function Projects() {
             </div>
             <div className={`project-image project-image-${lang}`} style={{backgroundImage: `url(${projects[previewNum].preview})`}} />
         </div>
-            <Link to="/projects/explore">
+            <Link to={{pathname: "/projects/explore", projects}}>
                 <button className={`explore-button explore-button-${lang}`}>
                     <div id="ndg-info-button-text">
                         {projectsText.startExploring}

@@ -1,18 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import './Services.css';
 import useGlobalState from "../../useGlobalState";
-import services from './dummyServices';
+// import services from './dummyServices';
 
 function Services(){
     const globalState = useGlobalState(),
             [servicesText, setServicesText] = useState({}),
+            [services, setServices] = useState([]),
             lang = globalState.lang.lang;
       useEffect(() => {
-          fetch("/data/lang.json")
-            .then(res => res.json())
-            .then(res => {
-                setServicesText(res[lang].services);
-            });
+        const api = (process.env.NODE_ENV === 'development') ? 'http://localhost:5000' : '';
+        fetch("/data/lang.json")
+        .then(res => res.json())
+        .then(res => {
+            setServicesText(res[lang].services);
+        });
+        fetch(`${api}/api/services`)
+        .then(res => res.json())
+        .then(res => setServices(res));
       }, [lang]);
     return(
         <div className={`services-container services-container-${lang}`}>
@@ -26,12 +31,12 @@ function Services(){
             </div>
             <div className="main-services-container">
                 {services.map((element) => 
-                    <div className="service-div">
+                    <div key={element._id} className="service-div">
                         <p className={`service-title service-title-${lang}`}>{element.title[lang]}</p>
                         <img alt="services pic" src={element.image} />
                         <ul className={`list list-${lang}`}>
                         {element.items[lang].map((item) =>
-                            <li>{item}</li>
+                            <li key={`item${Math.random()}`}>{item}</li>
                         )}
                         </ul>
                     </div>
